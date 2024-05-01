@@ -43,18 +43,82 @@ h6{
 
 
 
-/* Define colors */
+/* Define colors and typography */
 :root {
-    --primary-colour: #F27238;
+    --color-primary: #F27238;
 
-    --secondary-colour-1: #3A3F48;
-    --secondary-colour-2: #536681;
+    --color-secondary: #536681;
+    --color-secondary-dark:  #3A3F48;
 
-    --grey-1: #E4DEDC;
+    --black: #000;
+    --colour-border: #E4DEDC;
+    --colour-grey-2: #0000;
+    --color-background: #F6F6F6;
+    --white:#fff;
 
-    --background-color: #F6F6F6;
+    --colour-success: #000;
+    --colour-warning: #000;
+    --color-error: #F84444;
 
-    --error-color: #F84444;
+    /* typography */
+    --color-text: var(--color-secondary-dark);
+    --color-text-heading: var(--color-primary);
+    --color-text-subtle: var(--color-secondary);
+    --color-text-link: var(--color-secondary);
+    --color-text-visited: var(--color-secondary-dark);
+
+    /* border */
+    --color-border: var(--color-border);
+
+    /* body */
+    --color-body: var(--color-background);
+
+    /* forms */
+    --form-element-border: var(--color-border);
+    --form-element-border-focus: var(--colour-grey-2);
+    --form-element-border-error: var(--color-error);
+    --form-element-bg: var(--white);
+    --form-text-placeholder: var(--colour-grey-2);
+
+    /* buttons */
+    --bt-primary-bg: var(--color-secondary-dark);
+    --bt-primary-hover: var(--color-secondary);
+    --bt-primary-active: var(--color-secondary-dark);
+    --bt-primary-label: var(--white);
+
+    /* icons */
+    --colour-icon-primary: var(--color-secondary-dark);
+
+    /* fonts */
+    --font-primary: 'Feija';
+    --font-secondary: 'Inter';
+    --text-base-sixe: 1rem;
+
+    /* Type scale */  
+	--text-scal-ratio: 1.2;  
+	--text-xs: calc(1rem / (var(--text-scal-ratio) * var(--text-scal-ratio)));  
+	--text-sm: calc(1rem / var(--text-scal-ratio));  
+	--text-md: calc(1rem * var(--text-scal-ratio));  
+	--text-lg: calc(1rem * var(--text-scal-ratio) * var(--text-scal-ratio));  
+	--text-xl: calc(1rem * var(--text-scal-ratio) * var(--text-scal-ratio) *  
+	var(--text-scal-ratioo));  
+	--text-xxl: calc(1rem * var(--text-scal-ratio) * var(--text-scal-ratio) *  
+	var(--text-scal-ratio) * var(--text-scal-ratio));  
+	--text-xxxl: calc(1rem * var(--text-scal-ratio) * var(--text-scal-ratio) *  
+	var(--text-scal-ratio) * var(--text-scal-ratio) *  
+	var(--text-scal-ratio)); 
+
+    /* Spacing */  
+    --space-xxxs: 0.25em;  
+    --space-xxs: 0.375em;  
+    --space-xs: 0.5em;  
+    --space-sm: 0.75em;  
+    --space-md: 1.25em;  
+    --space-lg: 2em;  
+    --space-xl: 3.25em;  
+    --space-xxl: 5.25em;  
+    --space-xxxl: 8.5em;
+
 
 
 }
