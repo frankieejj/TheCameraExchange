@@ -119,16 +119,41 @@ h6{
     --space-xxl: 5.25em;  
     --space-xxxl: 8.5em;
 
+}
 
 
+/* Media query for iPhone 12 Pro */
+@media only screen and (max-width: 390px) {
+    h1 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    p {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Media query for Surface Pro 7 */
+@media only screen and (min-width: 390px) and (max-width: 1368px) {
+    h1 {
+        font-size: 36px; /* Adjust font size for larger screens */
+    }
+
+    p {
+        font-size: 20px; /* Adjust font size for larger screens */
+    }
+}
+
+body{
+    background-color: var(--color-background);
 }
 
 h1, h2, h3 {
     color: #fff; /* white text color */
-    background-color: navy; /* navy background color */
+    font: var(--font-primary);
 }
 
-.cluster {
+.header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -136,10 +161,10 @@ h1, h2, h3 {
     flex-direction: row;
 }
 
-.cluster > * {
+.header > * {
     margin: 0.5rem;
 }
-.cluster--end-aligned{
+.header--end-aligned{
     align-items: flex-end;
 }
 
@@ -164,7 +189,7 @@ h1, h2, h3 {
 
 .product-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .product-info {
@@ -178,24 +203,30 @@ h1, h2, h3 {
 }
 
 .product-name {
-    color: #3A3F48;
+    color: var(--color-secondary-dark);
     font-size: 16px;
     font-family: Inter;
     font-weight: 700;
     margin-bottom: 8px;
+    margin-top: 130px;
 }
 
 .product-description {
-    color: #536681;
+    color: var(--color-secondary);
     font-size: 14px;
     font-family: Inter;
     font-weight: 400;
     line-height: 19.6px;
-    margin-bottom: 16px;
+    margin-bottom: var(--space-xs);
+    margin-top: -5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .product-price {
-    color: #F27238;
+    color: var(--color-primary);
     font-size: 18px;
     font-family: Inter;
     font-weight: 700;
@@ -205,6 +236,7 @@ h1, h2, h3 {
 .stack{
     display: flex;
     flex-direction: column;
+    background-color: var(--white);
     gap: 1em;
     align-items: center;
 }
@@ -214,5 +246,178 @@ h1, h2, h3 {
     color: white;
     margin: 1em;
 }
-        
-            
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xxxs);
+}
+
+.image-container {
+    width: 600px;
+    height: 425px;
+    position: relative;
+    overflow: hidden; /* Ensure the image does not overflow the container */
+    border-radius: var(--space-xxxs);
+}
+
+.image-container img {
+    width: 100%; /* Make the image fill the width of the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper layout */
+    border-radius: var(--space-xxxs);
+}
+
+.image-container .placeholder,
+.thumbnails .thumbnail .placeholder {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: var(--space-xxxs);
+}
+
+.thumbnails {
+    width: 325px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 62px;
+    position: relative;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    border-radius: 4px;
+}
+
+.thumbnail.low-opacity img {
+    opacity: 0.5; /* Set opacity to 50% for thumbnails with low-opacity class */
+}
+
+/** code for decription **/
+.product-details {
+    width: 1164px;
+    height: 696px;
+    position: absolute;
+    left: 174px;
+    top: 181px;
+}
+
+.description {
+    width: 600px;
+    height: 92px;
+    position: absolute;
+    left: 0;
+    top: 604px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-secondary);
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 25.20px;
+    word-wrap: break-word;
+}
+
+.price {
+    position: absolute;
+    left: 929px;
+    top: 227px;
+    text-align: right;
+    color: #F27238;
+    font-size: 40px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 28px;
+    word-wrap: break-word;
+}
+
+.amount {
+    font-size: 40px;
+}
+
+.tax {
+    left: 1104px;
+    top: 238px;
+    color: var(--color-secondary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.40px;
+}
+
+.brand {
+    left: 664px;
+    top: 57px;
+    color: var(--color-secondary);
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.back-to-shopping {
+    width: 153px;
+    height: 17px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--color-secondary);
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 22.40px;
+}
+
+.arrow {
+    width: 17px;
+    height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-line {
+    width: 8.50px;
+    height: 4.25px;
+    border: 1px var(--color-secondary) solid;
+    transform: rotate(90deg);
+    transform-origin: 0 0;
+}
+
+.title {
+    width: 500px;
+    left: 664px;
+    top: 85px;
+    color: var(--color-primary);
+    font-size: 48px;
+    font-family: Test Feijoa Display;
+    font-weight: 900;
+    line-height: 52.80px;
+}
+
+.quantity {
+    width: 168px;
+    height: 23px;
+    left: 664px;
+    top: 295px;
+    color: var(--color-secondary);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+}
