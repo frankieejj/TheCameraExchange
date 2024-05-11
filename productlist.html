@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List of Products</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="nav__logo header">
+    <nav class="header">
+        <div class="header logo">
             <img src="resources/logo-desktop.png" alt="logo" class="logo">
         </div>
 
-        <ul class="nav__navigation header">
-            <il> <a class="btn" href="#">Home</a> </il>
-            <il> <a class="btn" href="productlist.html">Shop</a> </il>
+        <ul class="header nav" id="no-bullets">
+            <il> <a class="btn" href="index2.html">Home</a> </il>
+            <il> <a class="btn" href="#">Shop</a> </il>
             <il> <a class="btn" href="#">About Us</a> </il>
             <il> <a class="btn" href="#">Contact</a> </il>
             <li><img src="resources/search-button.png" alt="search-button" class="search-button"></li>
@@ -22,7 +23,7 @@
                 <img src="resources/bag-button.png" alt="cart-button" class="cart-button">
             </a></li>
         </ul>
-    </header>
+    </nav>
 
     <main>
         <div class="product-list-header">
@@ -39,17 +40,19 @@
                     <img src="resources/olympus-front.png" alt="Olympus OM2N with 50mm f1.4">
                 </div>
                 <div class="product-card-description">
-                    <h3>Olympus OM2N with 50mm f1.4</h3>
-                    <p>hdsjkahdahudheudhsuaihduiahduisahuidsa</p>
-                    <h4>$495.00</h4>
+                    <div class="title">Canon AE-1 Program w/ 50mm f1.8</div>
+                    <div class="description">Canon AE-1 Program w/ 50mm f1.8, Great condition, in full working order comes with all required caps.</div>
+                    <div class="price">$495.00</div>
                 </div>
-                <div class="add-quantity-product">
-                    <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity">1</span>
-                        <button class="plus-btn">+</button>
+                <div class="action">
+                    <div class="add-quantity-product">
+                        <div class="quantity-button">
+                            <button class="quantity-btn">-</button>
+                            <span class="quantity">1</span>
+                            <button class="quantity-btn">+</button>
+                        </div>
+                        <input type="button" value="Add to Cart" class="primary-btn">
                     </div>
-                    <input type="button" value="Add to Cart" class="primary-btn">
                 </div>
             </div>
 

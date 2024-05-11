@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Camera Exchange</title>
+    <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="nav__logo header">
+    <nav class="header">
+        <div class="header logo">
             <img src="resources/logo-desktop.png" alt="logo" class="logo">
         </div>
 
-        <ul class="nav__navigation header">
+        <ul class="header nav" id="no-bullets">
             <il> <a class="btn" href="#">Home</a> </il>
             <il> <a class="btn" href="productlist.html">Shop</a> </il>
             <il> <a class="btn" href="#">About Us</a> </il>
@@ -22,7 +24,7 @@
                 <img src="resources/bag-button.png" alt="cart-button" class="cart-button">
             </a></li>
         </ul>
-    </header>
+    </nav>
 
     <main>
         <!-- Carasole of Images -->
@@ -37,10 +39,12 @@
                 <img src="resources/frame-3.png" style="width:100%">
             </div>
         </div>
+        <script src="script.js"></script>
+
         <br>
 
         <!-- Circles to naviage carasole -->
-        <div style="text-align:center">
+        <div class="slide-nav">
             <span class="circle" onclick="currentSlide(1)"></span>
             <span class="circle" onclick="currentSlide(2)"></span>
             <span class="circle" onclick="currentSlide(3)"></span>
@@ -48,9 +52,12 @@
 
         <!-- New Releases Section -->
         <div class="new-releases">
-            <h1>New releases</h1>
-            <h6>Discover more</h6>
-            <img src="resources/right-arrow.png">
+            <div class = "new-releases-title">
+                <h3>New releases</h3>
+                <h6>Discover more</h6>
+                <img src="resources/right-arrow.png">
+            </div>
+            
             
             <!-- Product Card carasole -->
             <div class="container">

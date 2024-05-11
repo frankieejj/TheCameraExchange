@@ -1,3 +1,4 @@
+/* Define font family for website */
 body{
     font-family: "Inter", sans-serif;
 }
@@ -9,11 +10,12 @@ body{
     font-style: normal;
 }
 
-  
+/* Define Heading Typeography */
 h1{
     font-family: 'Feija', serif;
     size: 56px;
     line-height: 61.6px;
+    color: var(--color-primary);
 }
 h2{
     font-family: "Feija", serif;
@@ -24,6 +26,7 @@ h3{
     font-family: "Feija", serif;
     size: 40px;
     line-height: 44px;
+    color: var(--color-primary);
 }
 h4{
     font-family: "Feija", serif;
@@ -40,8 +43,9 @@ h6{
     size: 20px;
     line-height: 22px;
 }
-
-
+p{
+    color: var(--color-secondary);
+}
 
 /* Define colors and typography */
 :root {
@@ -148,12 +152,16 @@ body{
     background-color: var(--color-background);
 }
 
-h1, h2, h3 {
-    color: #fff; /* white text color */
-    font: var(--font-primary);
+main{
+    /* Margins */
+    margin-left: 174px;
+    margin-right: 174px;
 }
 
 .header {
+    background-color: white;
+    height: 60px;
+    padding: 12px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -164,9 +172,64 @@ h1, h2, h3 {
 .header > * {
     margin: 0.5rem;
 }
-.header--end-aligned{
-    align-items: flex-end;
+
+#no-bullets {
+  list-style-type: none;
 }
+
+/* Carasole Styles */
+.carasole {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slides {
+    display: none;
+}
+
+.slides-nav{
+    /* need to center and go over image */
+}
+
+.circle {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px; /* Adjust spacing between circles */
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--white);
+    transition: background-color 0.6s ease;
+}
+
+.active, .circle:hover {
+    background-color: var(--color-primary);
+}
+  
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* New Releases Title */
+.new-releases-title {
+    position: absolute;
+    left: 174px;
+    margin-top: 4px;
+}
+
+.new-releases h6 {
+    color: var(--color-secondary-dark);
+}
+
+
 
 .product-card {
     width: 162px;
@@ -421,3 +484,138 @@ h1, h2, h3 {
     font-weight: 700;
     line-height: 28px;
 }
+
+/* Styles for product list */
+.product-list-header {
+    text-align: center;
+}
+
+.product-list-product-card {
+        width: 282px;
+        height: 385px;
+        position: absolute;
+        border-radius: 12px;
+        overflow: hidden;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.product-card-description {
+    position: absolute;
+    top: 188px;
+    left: 12px;
+    width: 258px;
+    height: 104px;
+}
+
+.title {
+    color: #3A3F48;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 28px;
+    word-wrap: break-word;
+}
+
+.description {
+    color: #536681;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 22.40px;
+    word-wrap: break-word;
+}
+
+.price {
+    text-align: right;
+    color: #F27238;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 28px;
+    word-wrap: break-word;
+}
+
+.action {
+    width: 100px;
+    height: 40px;
+    padding: 3px 4px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-quantity-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 71px;
+}
+
+.quantity-button {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    width: 20px;
+    height: 20px;
+    background: #F27238;
+    border-radius: 9999px;
+    position: relative;
+    cursor: pointer;
+}
+
+.quantity-btn:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 2px;
+    background: white;
+    transform: translate(-50%, -50%);
+}
+
+.quantity {
+    text-align: center;
+    color: #3A3F48;
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 25.20px;
+    word-wrap: break-word;
+}
+
+.add-to-cart {
+    background: #3A3F48;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 25.20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Styles for check out 1 */
+.checkout-form h3 {
+    padding-left: 100px;
+}
+
+.checkout-form img {
+    padding-left: 400px;
+}
+
+.checkout-form form {
+    padding-left: 364px;
+}
+
