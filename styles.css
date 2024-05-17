@@ -158,19 +158,58 @@ main{
     margin-right: 174px;
 }
 
-.header {
-    background-color: white;
-    height: 60px;
-    padding: 12px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
+/* Header Styles */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
-.header > * {
-    margin: 0.5rem;
+.header {
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    display: block;
+}
+
+.inner_header{
+    width: 1021px; /* Adjust width to parent container */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Remove float from logo_header and nav_header */
+.logo_header, .nav_header {
+    height: 100%;
+    padding: 16px;
+    display: inline-block; /* Change to inline-block to allow centering */
+    vertical-align: middle; /* Vertically align inline-block elements */
+}
+
+.nav_header{
+    float: right;
+    height: 100%;
+}
+
+.nav_header a {
+    height: 100%;
+    display:table;
+    float: left;
+    padding: 0px 8px;
+}
+
+.nav_header a:last-child {
+    padding-right: 0;
+}
+
+.nav_header a li {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: var(--color-secondary-dark);
+    font-family: "Inter";
+    font-size: 18px;
 }
 
 #no-bullets {

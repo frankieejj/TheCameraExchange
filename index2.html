@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Camera Exchange</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesfinal.css">
     
 </head>
 <body>
     <!-- Header -->
-    <nav class="header">
-        <div class="header logo">
-            <img src="resources/logo-desktop.png" alt="logo" class="logo">
+    <header>
+        <div class="inner_header">
+            <div class="logo_header">
+                <img src="resources/logo-desktop.png" alt="logo" class="logo">
+            </div>
+
+            <ul class="nav_header" id="no-bullets">
+                <a class="btn" href="#"> <li>Home</li></a>
+                <a class="btn" href="productlist.html"><li>Shop</li></a> 
+                <a class="btn" href="#"><li>About Us</li></a>
+                <a class="btn" href="#"><li>Contact</li></a>
+                <a><li><img src="resources/search-button.png" alt="search-button" class="search-button"></li></a>
+                <a class="btn" href="shoppingcart.html"><li><img src="resources/bag-button.png" alt="cart-button" class="cart-button"></li></a>
+            </ul>
         </div>
+    </header>
 
-        <ul class="header nav" id="no-bullets">
-            <il> <a class="btn" href="#">Home</a> </il>
-            <il> <a class="btn" href="productlist.html">Shop</a> </il>
-            <il> <a class="btn" href="#">About Us</a> </il>
-            <il> <a class="btn" href="#">Contact</a> </il>
-            <li><img src="resources/search-button.png" alt="search-button" class="search-button"></li>
-            <li><a class="btn" href="shoppingcart.html">
-                <img src="resources/bag-button.png" alt="cart-button" class="cart-button">
-            </a></li>
-        </ul>
-    </nav>
-
-    <main>
+    <main id="index-grid">
         <!-- Carasole of Images -->
         <div class="carasole">
             <div class="slides fade">
@@ -51,7 +51,6 @@
         </div>
 
         <!-- New Releases Section -->
-        <div class="new-releases">
             <div class = "new-releases-title">
                 <h3>New releases</h3>
                 <h6>Discover more</h6>
@@ -112,8 +111,8 @@
                     </div>
                  </div>
             </div>
-        </div>
 
+    </main>
         <!-- Footer -->
         <footer>
             <h5>The Camera Exchange</h5>

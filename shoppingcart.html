@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesfinal.css">
 </head>
 <body>
     <!-- Header -->
@@ -24,50 +24,53 @@
             </a></li>
         </ul>
     </header>
+    <main id="shopping-cart-grid">
+        <!-- Shopping Cart Header -->
+        <div class="back-to-shopping">
+            <a href="index2.html">
+                <img src="resources/left-arrow.png" alt="Back">
+                <h4>Back to Shopping</h4>
+            </a>
+        </div>
 
-    <!-- Shopping Cart Header -->
-    <div class="back-to-shopping">
-        <a href="index2.html">
-            <img src="resources/left-arrow.png" alt="Back">
-            <h4>Back to Shopping</h4>
-        </a>
-    </div>
-    <h1>Shopping Cart</h1>
-    <div class="shopping-cart-information">
-        <!-- Details of each Product in Cart -->
-        <div class="shopping-cart-products">
-            <div class="product-card-checkout-preview">
-                <button>
-                    <img src="resources/x-cancel-button.png" alt="Remove">
-                </button>
-                
-                <div class="product-image">
-                    <img src="resources/olympus-front.png" alt="Olympus OM2N with 50mm f1.4">
-                </div>
-                <h4 class="product-name"> Olympus OM2N with 50mm f1.4</h4>
-                <div class="quantity-button">
-                    <button class="minus-btn">-</button>
-                    <span class="quantity">1</span>
-                    <button class="plus-btn">+</button>
-                </div>                    
-                <h4>$495.00</h4>
-            </div>
+        <h1>Shopping Cart</h1>
 
-            <div class="product-card-checkout-preview">
-                <button>
-                    <img src="resources/x-cancel-button.png" alt="Remove">
-                </button>
-                
-                <div class="product-image">
-                    <img src="resources/olympus-front.png" alt="Olympus OM2N with 50mm f1.4">
+        <div class="shopping-cart-information">
+            <!-- Details of each Product in Cart -->
+            <div class="shopping-cart-products">
+                <div class="product-card-checkout-preview">
+                    <button>
+                        <img src="resources/x-cancel-button.png" alt="Remove">
+                    </button>
+                    
+                    <div class="product-image">
+                        <img src="resources/olympus-front.png" alt="Olympus OM2N with 50mm f1.4">
+                    </div>
+                    <h4 class="product-name"> Olympus OM2N with 50mm f1.4</h4>
+                    <div class="quantity-button">
+                        <button class="minus-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="plus-btn">+</button>
+                    </div>                    
+                    <h4>$495.00</h4>
                 </div>
-                <h4 class="product-name"> Olympus OM2N with 50mm f1.4</h4>
-                <div class="quantity-button">
-                    <button class="minus-btn">-</button>
-                    <span class="quantity">1</span>
-                    <button class="plus-btn">+</button>
-                </div>                    
-                <h4>$495.00</h4>
+
+                <div class="product-card-checkout-preview">
+                    <button>
+                        <img src="resources/x-cancel-button.png" alt="Remove">
+                    </button>
+                    
+                    <div class="product-image">
+                        <img src="resources/olympus-front.png" alt="Olympus OM2N with 50mm f1.4">
+                    </div>
+                    <h4 class="product-name"> Olympus OM2N with 50mm f1.4</h4>
+                    <div class="quantity-button">
+                        <button class="minus-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="plus-btn">+</button>
+                    </div>                    
+                    <h4>$495.00</h4>
+                </div>
             </div>
         </div>
 
@@ -90,7 +93,8 @@
             </div>
             <input type="button" value="Confirm Order" class="primary-btn">
         </div>
-    </div>
+    </main>
+    
 
     <!-- Footer -->
     <footer>
