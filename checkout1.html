@@ -10,9 +10,9 @@
     <!-- Header -->
     <header>
         <div class="inner_header">
-            <div class="logo_header">
+            <a href="index2.html" class="logo_header">
                 <img src="res/logowithtext.png" alt="logo" class="logo">
-            </div>
+            </a>
 
             <ul class="nav_header" id="no-bullets">
                 <a class="btn" href="index2.html"> <li>home</li></a>
@@ -26,8 +26,8 @@
     </header>
     
     <main id="checkout-grid">
-            <h3>Checkout</h3>
-            <img src="resources/checkout1.png">
+            <h1>Checkout</h1>
+            <img src="res/checkout-1.png"  id="checkout-progress">
 
             <!-- Checkout Form for Page 1 -->
             <form>
@@ -45,16 +45,16 @@
                 <input type="text" id="suburb" name="suburb" placeholder="Melbourne">
 
                 <div class="row">
-                    <div class="col-50">
+                    <div class="col-45">
                         <label for="state">State</label>
                         <input type="text" id="state" name="state" placeholder="VIC">
                     </div>
-                    <div class="col-50">
+                    <div class="col-45">
                         <label for="postcode">Postcode</label>
                         <input type="text" id="postcode" name="postcode" placeholder="3000">
                     </div>
                 </div>
-                <input type="button" value="Next" class="primary-btn">
+                <input type="button" value="Next" class="primary-btn" onclick="location.href='/checkout2.html'">
             </form>
 
     </main>

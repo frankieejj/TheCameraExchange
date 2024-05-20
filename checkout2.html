@@ -10,9 +10,9 @@
     <!-- Header -->
     <header>
         <div class="inner_header">
-            <div class="logo_header">
+            <a href="index2.html" class="logo_header">
                 <img src="res/logowithtext.png" alt="logo" class="logo">
-            </div>
+            </a>
 
             <ul class="nav_header" id="no-bullets">
                 <a class="btn" href="index2.html"> <li>home</li></a>
@@ -27,7 +27,7 @@
     
     <main id="checkout-grid">
         <h1>Checkout</h1>
-        <img src="resources/checkout2.png">
+        <img src="res/checkout-2.png"  id="checkout-progress">
 
         <!-- Checkout Form for Page 2 -->
         <form>
@@ -36,16 +36,16 @@
             <label for="ccnum">Credit Card Number</label>
             <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
             <div class="row">
-              <div class="col-50">
+              <div class="col-45">
                 <label for="expdate">Expiry Date</label>
                 <input type="text" id="expdate" name="expdate" placeholder="12/2024">
               </div>
-              <div class="col-50">
+              <div class="col-45">
                 <label for="cvv">CVV</label>
                 <input type="text" id="cvv" name="cvv" placeholder="352">
               </div>
             </div>
-            <input type="button" value="Next" class="primary-btn">
+            <input type="button" value="Next" class="primary-btn" onclick="location.href='/checkout3.html'">
         </form>
     </main>
     

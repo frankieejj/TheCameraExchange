@@ -10,9 +10,9 @@
    <!-- Header -->
    <header>
     <div class="inner_header">
-        <div class="logo_header">
+        <a href="index2.html" class="logo_header">
             <img src="res/logowithtext.png" alt="logo" class="logo">
-        </div>
+        </a>
 
         <ul class="nav_header" id="no-bullets">
             <a class="btn" href="index2.html"> <li>home</li></a>
@@ -27,89 +27,86 @@
     
     <main id="checkout-grid">
         <h1>Checkout</h1>
-        <img src="resources/checkout3.png">
+        <img src="res/checkout-3.png"  id="checkout-progress">
 
         <!-- Checkout Form for Page 3 -->
         <form>
-            <input type="button" value="Confirm Order" class="primary-btn">
+            <input type="button" value="Confirm Order" class="primary-btn" onclick="location.href='/checkout4.html'">
             
             <!-- Order Details -->
             <div class="order__details">
-                <h3>Order Detail</h3>
+                <h8>Order Detail</h8>
                 <hr>
 
                 <!-- Details of each Product in Cart -->
                 <div class="product-card-checkout-preview">
-                    <button>
-                        <img src="resources/x-cancel-button.png" alt="Remove">
-                    </button>
+                    <img class="x" src="res/x.png" alt="Remove">
                     
                     <div class="product-image">
                         <img src="resources/olympus-front.png" alt="Olympus OM2N with 50mm f1.4">
                     </div>
-                    <h4 class="product-name"> Olympus OM2N with 50mm f1.4</h4>
+                    <h9 class="product-name"> Olympus OM2N with 50mm f1.4</h9>
                     <div class="quantity-button">
                         <button class="minus-btn">-</button>
-                        <span class="quantity">1</span>
+                        <span class="quantity"><h8>1</h8></span>
                         <button class="plus-btn">+</button>
-                    </div>                    
-                    <h3>$495.00</h3>
+                    </div>                   
+                    <div class="price"><h9>$495.00</h9></div>
                 </div>
                 <div class="product-card-checkout-preview">
-                    <button>
-                        <img src="resources/x-cancel-button.png" alt="Remove">
-                    </button>
+                    <img class="x" src="res/x.png" alt="Remove">
                     
                     <div class="product-image">
                         <img src="resources/olympus-front.png" alt="Olympus OM2N with 50mm f1.4">
                     </div>
-                    <h4 class="product-name"> Olympus OM2N with 50mm f1.4</h4>
+                    <h9 class="product-name"> Olympus OM2N with 50mm f1.4</h9>
                     <div class="quantity-button">
                         <button class="minus-btn">-</button>
-                        <span class="quantity">1</span>
+                        <span class="quantity"><h8>1</h8></span>
                         <button class="plus-btn">+</button>
-                    </div>                    
-                    <h3>$495.00</h3>
+                    </div>                   
+                    <div class="price"><h9>$495.00</h9></div>
                 </div>
 
-                <!-- Delivery Adress Confirmation -->
+                <!-- Delivery Address Confirmation -->
                 <div class="checkout-edit"> 
-                    <h3>Delivery Adress</h3>
-                    <a href="checkout1.html">
-                        <img src="resources/edit-button.png" alt="Edit Information">
+                    <h8 class="delivery-title">Delivery Address</h8>
+                    <hr class="divider">
+                    <a href="checkout1.html" class="edit-icon-container">
+                        <img src="res/edit.png" alt="Edit Information" class="edit-icon">
                     </a>
+                    <h9 id="name" class="address-text">John Johnson</h9>
+                    <h9 id="adress1" class="address-text">37 Pleasant Street</h9>
+                    <h9 id="adress2" class="address-text">Melbourne 3000 VIC</h9>
                 </div>
-                <h5>John Johnson</h5>
-                <h5>37 Pleasent Street</h5>
-                <h5>Melbourne 3000 VIC</h5>
 
                 <!-- Payment Method Confirmation -->
                 <div class="checkout-edit"> 
-                    <h3>Payment Method</h3>
+                    <h8>Payment Method</h8>
                     <a href="checkout2.html">
-                        <img src="resources/edit-button.png" alt="Edit Information">
+                        <img src="res/edit.png" alt="Edit Information">
                     </a>
                 </div>
-                <h5>1111-2222-3333-4444</h5>
-                <h5>John Johnson</h5>
-                <h5>12/2024</h5>
+                <h9>1111-2222-3333-4444</h9>
+                <h9>John Johnson</h9>
+                <h9>12/2024</h9>
 
                 <!-- Order Summary -->
                 <div class="order-summary">
-                    <h2>Order Summary</h2>
+                    <h6>Order Summary</h6>
                     <div class="price-information">
-                        <h5>Subtotal</h5>
-                        <h5>$1,080.00</h5>
+                        <h9>Subtotal</h9>
+                        <h9>$1,080.00</h9>
                     </div>
                     <hr>
                     <div class="price-information">
-                        <h5>Shipping</h5>
-                        <h5>$1.99</h5>
+                        <h9>Shipping</h9>
+                        <h9>$1.99</h9>
                     </div>
                     <hr>
                     <div class="price-information">
-                        <h3>Total</h3>
-                        <h3>$1,081.99</h3>
+                        <h7>Total</h7>
+                        <h7>$1,081.99</h7>
                     </div>
                     <input type="button" value="Confirm Order" class="primary-btn">
                 </div>
