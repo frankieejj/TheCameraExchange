@@ -1,21 +1,95 @@
-.product-checkout-preview{
-   display: flex;
-   justify-content: space-between;
-   align-items: center; 
-}
-.x{
-    width: 12px;
-    height: 12px;
+/* .product-list-preview{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr 1fr 1fr;
+    background-color: aqua;
+    border-radius: 12px;
+    max-width: 282px;
+    height: 385px;
+    padding: 8px;
 }
 
-.product-checkout-image{
-    width: 90px;
-    height: 68px;
+.product-list-image{
+    grid-row: 1;
+    grid-column: 1/-1;
+    width: 258px;
+    height: 160px;
     border-radius: 8px;
     overflow: hidden;
 }
-.product-checkout-image img{
-    align-self: stretch;
+
+.product-list-image img{
+    object-fit:cover;
     width: 100%;
     height: 100%;
+}
+.product-list-title{
+    grid-row: 2;
+    grid-column: 1/-1;
+    max-width:258px;
+    max-height: 50px;
+}
+
+.product-list-price{
+    grid-row: 4;
+    grid-column: 2;
+}
+#list-quantity{
+    grid-row: 5;
+    grid-column: 1;
+}
+#list-quantity{
+    grid-row: 5;
+    grid-column: 2;
+} */
+
+.product-list-preview {
+    max-width: 282px; /* Ensures the card doesn't exceed the width of its container */
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 12px;
+    background-color: antiquewhite;
+  }
+  
+  .product-list-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-top: 8px;
+  }
+  
+  .product-list-title.expanded {
+    -webkit-line-clamp: unset;
+  }
+  
+  
+  .product-list-image {
+    width: 100%;
+    height: auto; /* Adjusts the height automatically according to the width to maintain aspect ratio */
+    overflow: hidden;
+    border-radius: 8px;
+    height: 160px;
+  }
+  
+  .product-list-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .product-list-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .product-list-description.expanded {
+    -webkit-line-clamp: unset;
+  }
+  
+.add-to-cart-preview{
+    display: flex;
+    justify-content: space-between;
 }

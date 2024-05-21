@@ -5,6 +5,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Inter';
+    src: url('res/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* Define colors and typography */
 :root {
@@ -54,7 +60,7 @@
 
     /* fonts */
     --font-primary: 'Feija';
-    --font-secondary: Inter;
+    --font-secondary: 'Inter';
     --text-base-sixe: 1rem;
 }
 
@@ -94,7 +100,7 @@ h6{
 h7{
     font-family: var(--font-secondary), Poppins, sans-serif;
     size: 20px;
-    line-height: 28px;
+    /* line-height: 28px; */
 }
 h8{
     font-family: var(--font-secondary), Poppins, sans-serif;
@@ -228,6 +234,9 @@ footer {
     color: var(--white);
     grid-column: 2;
   }
+  footer .line{
+    height: 70px;
+  }
   
   footer .icons {
     display: flex;
@@ -279,15 +288,16 @@ footer {
 }
 #checkout-grid form label {
     display: flex;
-    align-items: left;
+    align-items: center;
     gap: 2px;
     color: var(--color-secondary-dark);
     /* HOW TO GET FONT RIGHT*/
     font-size: 14px;
-    font-family: Poppins;
+    font-family: var(--font-secondary);
     font-weight: 400;
     line-height: 22.40px;
     width: 100%;
+    box-sizing: border-box;
 }
 #checkout-grid form input[type="text"] {
     display: block;
@@ -300,20 +310,23 @@ footer {
     color: var(--color-secondary);
     /* HOW TO GET FONT RIGHT*/
     font-size: 16px;
-    font-family: Poppins;
+    font-family: var(--font-secondary);
     font-weight: 400;
     line-height: 24px;
+    box-sizing: border-box;
 }
 #checkout-grid .row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    box-sizing: border-box;
 }
 #checkout-grid .col-45 {
     flex: 0 0 45%;
     max-width: 45%;
     padding-bottom: 12px;
+    box-sizing: border-box;
 }
 #checkout-grid form h8 {
     font-weight: 700;
@@ -336,13 +349,14 @@ hr {
     overflow: hidden;
     color: var(--white);
     /* HOW TO GET FONT RIGHT*/
-    font-size: 16px;
-    font-family: Poppins;
-    font-weight: 400;
-    line-height: 24px;
+    font-size: 18px;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    line-height: 25.20px;
     text-align: center;
     cursor: pointer;
 }
+
 .checkout-edit {
     width: 100%;
     position: relative;
@@ -470,7 +484,7 @@ hr {
 /* Index Styles */
 #index-grid {
     display: grid;
-    grid-template-rows: 2fr 1fr 4fr;
+    grid-template-rows: auto auto auto;
 }
 
 #index-grid .carasole{
@@ -487,6 +501,7 @@ hr {
 
 .new-releases-title h2 {
     margin-bottom: 0;
+    margin-top: 0;
     color: var(--color-primary);
 }
 
@@ -509,16 +524,14 @@ hr {
 }
 
 #index-grid .container{
-    background-color: pink;
     grid-column: 1/-1;
     grid-row: 3;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items:start;
     width: 100%;
     /* WHY IS THIS NOT WORKING */
     overflow-x: auto;
-    padding: 20px;
 }
 
 .product-cards {
@@ -552,7 +565,6 @@ hr {
     font-weight: 700;
     margin: 4px 0;
     word-wrap: break-word;
-    text-align: center;
 }
 
 .product-card-description p {
@@ -565,9 +577,9 @@ hr {
     width: 140px;
 }
 
+
 .product-card-description h7 {
     /* WHY NOT WORKING */
-    text-align: right;
     color: var(--color-primary);
     font-weight: 700;
     margin-top: 16px;
@@ -606,9 +618,73 @@ hr {
 }
 
 #product-list-grid .product-list-product-cards{
-    background-color: blue;
+    padding-top: 12px;
     grid-column: 1/-1;
     grid-row: 2;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+.product-list-preview {
+    max-width: 230px; 
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 12px;
+    background-color: var(--white);
+    margin-bottom: 20px;
+  }
+  
+  .product-list-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-top: 8px;
+    color: var(--color-secondary-dark);
+    font-weight: 700;
+  }
+  
+  .product-list-title.expanded {
+    -webkit-line-clamp: unset;
+  }
+  
+  
+  .product-list-image {
+    width: 100%;
+    height: auto; /* Adjusts the height automatically according to the width to maintain aspect ratio */
+    overflow: hidden;
+    border-radius: 8px;
+    height: 160px;
+  }
+  
+  .product-list-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .product-list-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: var(--color-secondary);
+  }
+  
+  .product-list-description.expanded {
+    -webkit-line-clamp: unset;
+  }
+  
+.add-to-cart-preview{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 8px;
+    
+}
+#list-button{
+    max-width: 55%;
+    padding: 8px;
 }
 
 
@@ -644,7 +720,7 @@ hr {
 #product-page-grid{
     display: grid;
     grid-template-columns: 6fr 1fr 6fr;
-    grid-template-columns: 1fr 6fr 2fr;
+    grid-template-rows: auto auto auto;
 }
 
 #product-page-grid .back-to-shopping{
@@ -674,6 +750,7 @@ hr {
 #product-page-grid .product-image-options{
     grid-column: 1;
     grid-row: 2;
+    justify-content: start;
 }
 
 
@@ -688,11 +765,11 @@ hr {
 }
 
 .product-image {
-    width: 600px;
-    height: 425px;
+    width: 500px;
     position: relative;
     overflow: hidden; /* Ensure the image does not overflow the container */
     border-radius: 12px;
+    padding-bottom: 8px;
 }
 
 .product-image img {
@@ -761,11 +838,15 @@ hr {
 .product-information h7{
     color: var(--color-secondary);
     font-weight: 700;
-    margin-bottom: 10px;
+
 }
-.product-information h2{
+.product-information h1{
     color: var(--color-primary);
-    margin-bottom: 20px;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 40px;
+    line-height: normal;
 }
 
 .product-price {
@@ -773,16 +854,21 @@ hr {
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    margin-bottom: 20px;
-  }
+    
+}
 
 .product-price h3{
     font-family: var(--font-secondary), sans-serif;
     color: var(--color-primary);
     margin-right: 10px;
+    font-size: 36px;
+    margin-top: 36px;
+    margin-bottom: 36px;
 }
 .product-price h9{
     color: var(--color-secondary);
+    margin-top: 36px;
+    margin-bottom: 20px;
 }
 
 .product-quantity {
@@ -796,7 +882,7 @@ hr {
 .product-quantity h7{
     color: var(--color-secondary);
     font-weight: 700;
-    padding-right: 10px;
+    padding-right: 20px;
     padding-top: 5px;
 }
 

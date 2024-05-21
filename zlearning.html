@@ -1,100 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Grid Example</title>
-  <style>
-    body {
-      margin: 0;
-      display: grid;
-      grid-template-columns: 2fr 7fr 1fr 6fr 2fr;
-      grid-template-rows: 1fr 1fr 10fr 1fr 3fr;
-      margin: 0;
-      height: 100vh;
-      background-color: var(--color-background);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Card</title>
+<style>
+/* Card Styles */
+.card {
+  max-width: 100%; /* Ensures the card doesn't exceed the width of its container */
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.2);
+  overflow: hidden;
+  margin: 0 auto;
+}
 
-    .header {
-      grid-column: 2/span 3;
-      background-color: blue;
-    }
+.card-title {
+  margin: 0;
+  padding: 1rem;
+}
 
-    .back-to-shopping {
-      grid-column: 2/span 1;
-      grid-row: 2;
-      background-color: red;
-    }
+.card-body {
+  padding: 0;
+}
 
-    .product-image-options {
-      grid-column: 2/span 1;
-      grid-row: 3;
-      background-color: green;
-    }
+.card-image {
+  width: 100%;
+  height: auto; /* Adjusts the height automatically according to the width to maintain aspect ratio */
+  overflow: hidden;
+}
 
-    .product-description {
-      grid-column: 2/span 1;
-      grid-row: 4;
-      background-color: yellow;
-    }
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .product-information {
-      grid-column: 4/span 1;
-      grid-row: 3;
-      background-color: purple;
-    }
+.card-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 1rem;
+}
 
-    .footer {
-      grid-column: 2/span 3;
-      grid-row: 5;
-      background-color: pink;
-    }
+.card-description.expanded {
+  -webkit-line-clamp: unset;
+}
 
-    main {
-      grid-column: 2/-2;
-      grid-row: 2;
-      background-color: black;
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      grid-template-rows: 2fr 1fr auto;
-    }
+.read-more {
+  display: block;
+  margin: 1rem;
+  background-color: #007aff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
 
-    .checkout-form h3 {
-      grid-column: 1/-1;
-      grid-row: 1;
-      background-color: #F84444;
-    }
-
-    .checkout-form img {
-      grid-column: 2;
-      grid-row: 2;
-      background-color: #F84444;
-    }
-
-    .checkout-form form {
-      grid-column: 3;
-      grid-row: 3;
-      background-color: #F84444;
-    }
-  </style>
+.read-more:hover {
+  background-color: #0051a3;
+}
+</style>
 </head>
 <body>
-  <header class="header">Header</header>
-  <div class="back-to-shopping">Back to Shopping</div>
-  <div class="product-image-options">Product Image Options</div>
-  <div class="product-description">Product Description</div>
-  <div class="product-information">Product Information</div>
-  <footer class="footer">Footer</footer>
-  <main>
-    <div class="checkout-form">
-      <h3>Checkout Form</h3>
-      <img src="image.jpg" alt="Image">
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        <button type="submit">Submit</button>
-      </form>
+
+<div class="card">
+  <div class="card-body">
+    <div class="card-image">
+      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Card image">
     </div>
-  </main>
+    <div class="card-header">
+      <h2 class="card-title">Card Title</h2>
+    </div>
+    <p class="card-description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis enim at lacus feugiat, ut scelerisque est laoreet. Etiam aliquam urna non bibendum auctor. Donec euismod massa id dui tristique, vel commodo lectus rutrum. Pellentesque euismod, sem vitae pharetra bibendum, libero sapien dignissim libero, ut tincidunt urna orci vel mi.
+    </p>
+    <button class="read-more">Read more</button>
+  </div>
+</div>
+
 </body>
 </html>
