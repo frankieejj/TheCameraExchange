@@ -35,31 +35,15 @@
             
             <!-- Order Details -->
             <div class="order-details">
-                <h8>Order Detail</h8>
+                <h8>Order Details</h8>
                 <hr>
 
                 <!-- Details of each Product in Cart -->
                 <div class="checkout-container">
-                    <div class="product-card-checkout-preview">
+                    <div class="product-checkout-preview">
                         <img class="x" src="res/x.png" alt="Remove">
                         
-                        <div class="product-card-image">
-                            <img src="resources/olympus-front.png" alt="Olympus OM2N with 50mm f1.4">
-                        </div>
-                        <div class="product-card-details">
-                            <h9 class="product-name"> Olympus OM2N with 50mm f1.4</h9>
-                            <div class="quantity-button">
-                            <button class="minus-btn">-</button>
-                            <span class="quantity"><h8>1</h8></span>
-                            <button class="plus-btn">+</button>
-                            </div>                   
-                            <div class="price"><h9>$495.00</h9></div>
-                        </div>
-                    </div>
-                    <div class="product-card-checkout-preview">
-                        <img class="x" src="res/x.png" alt="Remove">
-                        
-                        <div class="product-image">
+                        <div class="product-checkout-image">
                             <img src="resources/olympus-front.png" alt="Olympus OM2N with 50mm f1.4">
                         </div>
                         <h9 class="product-name"> Olympus OM2N with 50mm f1.4</h9>
@@ -68,33 +52,54 @@
                             <span class="quantity"><h8>1</h8></span>
                             <button class="plus-btn">+</button>
                         </div>                   
-                        <div class="price"><h9>$495.00</h9></div>
+                         <div class="price"><h9>$495.00</h9></div>
+                    </div>
+
+                    <div class="product-checkout-preview">
+                        <img class="x" src="res/x.png" alt="Remove">
+                        
+                        <div class="product-checkout-image">
+                            <img src="resources/olympus-front.png" alt="Olympus OM2N with 50mm f1.4">
+                        </div>
+                        <h9 class="product-name"> Olympus OM2N with 50mm f1.4</h9>
+                        <div class="quantity-button">
+                            <button class="minus-btn">-</button>
+                            <span class="quantity"><h8>1</h8></span>
+                            <button class="plus-btn">+</button>
+                        </div>                   
+                         <div class="price"><h9>$495.00</h9></div>
                     </div>
                 </div>
 
 
                 <!-- Delivery Address Confirmation -->
                 <div class="checkout-edit"> 
-                    <h8 class="delivery-title">Delivery Address</h8>
+                    <div class="section-header">
+                        <h8 class="section-title">Delivery Address</h8>
+                        <img src="res/edit-pin.png" alt="Edit Information" class="edit-icon" onclick="location.href='checkout1.html'">
+                    </div>
                     <hr class="divider">
-                    <a href="checkout1.html" class="edit-icon-container">
-                        <img src="res/edit.png" alt="Edit Information" class="edit-icon">
-                    </a>
-                    <h9 id="name" class="address-text">John Johnson</h9>
-                    <h9 id="adress1" class="address-text">37 Pleasant Street</h9>
-                    <h9 id="adress2" class="address-text">Melbourne 3000 VIC</h9>
+                    <div class="payment-details">
+                        <p id="name" class="checkout-text">John Johnson</p>
+                        <p id="adress1" class="checkout-text">37 Pleasant Street</p>
+                        <p id="adress2" class="checkout-text">Melbourne 3000 VIC</p>
+                    </div>
                 </div>
 
                 <!-- Payment Method Confirmation -->
-                <div class="checkout-edit"> 
-                    <h8>Payment Method</h8>
-                    <a href="checkout2.html">
-                        <img src="res/edit.png" alt="Edit Information">
-                    </a>
-                </div>
-                <h9>1111-2222-3333-4444</h9>
-                <h9>John Johnson</h9>
-                <h9>12/2024</h9>
+                <div class="checkout-edit">
+                    <div class="section-header">
+                        <h8 class="section-title">Payment Method</h8>
+                        <img src="res/edit-pin.png" alt="Edit Information" class="edit-icon" onclick="location.href='checkout2.html'">
+                    </div>
+                    <hr class="divider">
+                    <div class="payment-details">
+                        <p class="checkout-text" id="credit-no">1111-2222-3333-4444</p>
+                        <p class="checkout-text" id="credit-name">John Johnson</p>
+                        <p class="checkout-text" id="credit-date">12/2024</p>
+                    </div>
+                </div>  
+                
 
                 <!-- Order Summary -->
                 <div class="order-summary">
