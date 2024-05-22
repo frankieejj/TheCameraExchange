@@ -502,9 +502,9 @@ hr {
      overflow: hidden;
  }
  .product-checkout-image img{
-     align-self: stretch;
-     width: 100%;
-     height: 100%;
+    object-fit: fill;
+    width: 100%;
+  height: 100%;
  }
 .product-name{
     font-weight: 700;
@@ -570,6 +570,28 @@ hr {
         
         justify-self: center;
         padding-left: 0;
+    }
+    #checkout-grid form{
+        justify-self: center;
+        width: 75%;
+    }
+    #checkout-grid {
+        grid-template-rows: 2fr auto auto 1fr;
+    }
+    .x{
+        padding-right: 4px;
+    }
+    .product-checkout-image{
+        width: 70px;
+        height: 60px;
+    }
+    .product-name{
+        font-size: 12px;
+        line-height: 16px;
+        padding-left: 4px;
+    }
+    .price{
+        font-size: 12px;
     }
 }
 
@@ -822,7 +844,32 @@ hr {
     grid-column: 3;
     grid-row: 3;
 }
+/* Media query for iPhone 12 Pro */
+@media only screen and (max-width: 390px) {
+    #shopping-cart-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto auto auto 1fr;
+    }
+    #shopping-cart-grid .back-to-shopping{
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 0px;
+        margin-top: 20px;
 
+    }
+    #shopping-cart-grid h1{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #shopping-cart-grid .shopping-cart-information{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #shopping-cart-grid .order-summary{
+        grid-column: 1;
+        grid-row: 4;
+    }
+}
 /* Product Page Styles */
 #product-page-grid{
     display: grid;
@@ -1001,7 +1048,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: max-content;
+
 }
 
 .minus-btn, .plus-btn {
@@ -1059,8 +1106,26 @@ hr {
 /* Media query for iPhone 12 Pro */
 @media only screen and (max-width: 390px) {
     #product-page-grid{
-        display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: 1fr auto auto auto 1fr;
+    }
+    #product-page-grid .back-to-shopping{
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 0px;
+        margin-top: 20px;
+
+    }
+    #product-page-grid .product-image-options{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #product-page-grid .product-description{
+        grid-column: 1;
+        grid-row: 4;
+    }
+    #product-page-grid .product-information{
+        grid-column: 1;
+        grid-row: 3;
     }
 }
