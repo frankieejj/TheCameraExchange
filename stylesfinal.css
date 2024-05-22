@@ -874,7 +874,7 @@ hr {
 #product-page-grid{
     display: grid;
     grid-template-columns: 6fr 1fr 6fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
 }
 
 #product-page-grid .back-to-shopping{
@@ -903,7 +903,7 @@ hr {
 
 #product-page-grid .product-image-options{
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 2/-2;
     justify-content: start;
 }
 
@@ -942,9 +942,9 @@ hr {
 }
 
 .thumbnails {
-    width: 325px;
+    width: 350px;
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: flex-start;
 }
 
@@ -952,6 +952,7 @@ hr {
     width: 100px;
     height: 62px;
     position: relative;
+    margin: 0 10px;
 }
 
 .thumbnail img {
@@ -968,7 +969,7 @@ hr {
 
 #product-page-grid .product-description{
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 4;
 }
 
 
@@ -981,12 +982,17 @@ hr {
     grid-column: 3;
     grid-row: 2;
 }
+#product-page-grid .product-price-information{
+    grid-column: 3;
+    grid-row: 3;
+}
+
 .product-information {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    box-sizing: border-box;
+    height: 100%;
 }
 
 .product-information h7{
@@ -1016,8 +1022,8 @@ hr {
     color: var(--color-primary);
     margin-right: 10px;
     font-size: 36px;
-    margin-top: 36px;
-    margin-bottom: 36px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .product-price h9{
     color: var(--color-secondary);
@@ -1082,12 +1088,12 @@ hr {
     padding-right: 10px;
 }
 
-.product-information img{
+.product-price-information img{
     width: 500px; /** NEED TO FIX **/
     padding-top: 24px;
 }
 
-.product-information .primary-btn {
+.product-price-information .primary-btn {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -1106,26 +1112,72 @@ hr {
 /* Media query for iPhone 12 Pro */
 @media only screen and (max-width: 390px) {
     #product-page-grid{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr auto auto auto 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: 1fr auto auto auto auto 1fr;
+    
     }
     #product-page-grid .back-to-shopping{
-        grid-column: 1;
+        grid-column: 2;
         grid-row: 1;
-        margin-bottom: 0px;
+        margin-bottom: 20px;
         margin-top: 20px;
-
+        justify-self: left;
     }
     #product-page-grid .product-image-options{
-        grid-column: 1;
-        grid-row: 2;
+        grid-column: 2;
+        grid-row: 3;
+        margin-top: 10px;
+        justify-self: center;
+    }
+
+    .product-image-options .thumbnails{
+        width: 60%;
+    }
+    .thumbnail{
+        margin: 0 2px;
     }
     #product-page-grid .product-description{
-        grid-column: 1;
-        grid-row: 4;
+        grid-column: 2;
+        grid-row: 5;
+        width: 100%;
+        justify-self: center;
+        margin-top: 10px;
     }
     #product-page-grid .product-information{
-        grid-column: 1;
-        grid-row: 3;
+        grid-column: 2;
+        grid-row: 2;
+        width: 100%;
+        justify-self: center;
     }
+    .product-information h1{
+        font-size: 24px;
+        justify-self: center;
+    }
+    #product-page-grid .product-price-information{
+        grid-column: 2;
+        grid-row: 4;
+    }
+    .product-price-information .product-price{
+        justify-content: flex-start;
+        align-items: end;
+    }
+    .product-price-information .product-price h3{
+        font-size: 28px;
+    }
+    .product-price-information .product-price h9{
+        font-size: 14px;
+        margin-bottom: 6px;
+        margin-top: 0px;
+    }
+    #product-page-grid  .product-image{
+        width: 100%;
+    }
+    .product-price-information .primary-btn {
+        width: 100%;
+    }
+    .product-price-information img{
+        width: 100%;
+        content: url("res/delivery-small-button.png");
+    }
+
 }
