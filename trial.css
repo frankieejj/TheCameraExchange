@@ -1,95 +1,92 @@
-/* .product-list-preview{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-columns: auto 1fr 1fr 1fr 1fr;
-    background-color: aqua;
-    border-radius: 12px;
-    max-width: 282px;
-    height: 385px;
-    padding: 8px;
+/* Header Styles */
+header {
+  grid-column: 1/-1;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
 }
 
-.product-list-image{
-    grid-row: 1;
-    grid-column: 1/-1;
-    width: 258px;
-    height: 160px;
-    border-radius: 8px;
-    overflow: hidden;
+.inner_header {
+  grid-column: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.menu-button{
+  height: 24px;
+  display: none;
 }
 
-.product-list-image img{
-    object-fit:cover;
-    width: 100%;
-    height: 100%;
+.logo-header-desktop {
+  height: 30px;
+
 }
-.product-list-title{
-    grid-row: 2;
-    grid-column: 1/-1;
-    max-width:258px;
-    max-height: 50px;
+.logo-header-mobile {
+  display: none;
 }
 
-.product-list-price{
-    grid-row: 4;
-    grid-column: 2;
+.logo {
+  height: 30px;
 }
-#list-quantity{
-    grid-row: 5;
-    grid-column: 1;
-}
-#list-quantity{
-    grid-row: 5;
-    grid-column: 2;
-} */
 
-.product-list-preview {
-    max-width: 282px; /* Ensures the card doesn't exceed the width of its container */
-    border-radius: 12px;
-    overflow: hidden;
-    padding: 12px;
-    background-color: antiquewhite;
-  }
-  
-  .product-list-title {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    padding-top: 8px;
-  }
-  
-  .product-list-title.expanded {
-    -webkit-line-clamp: unset;
-  }
-  
-  
-  .product-list-image {
-    width: 100%;
-    height: auto; /* Adjusts the height automatically according to the width to maintain aspect ratio */
-    overflow: hidden;
-    border-radius: 8px;
-    height: 160px;
-  }
-  
-  .product-list-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .product-list-description {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  
-  .product-list-description.expanded {
-    -webkit-line-clamp: unset;
-  }
-  
-.add-to-cart-preview{
+.nav_header {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_header li {
+  margin-left: 30px;
+}
+
+.nav_header a {
+  color: var(--color-secondary-dark);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.search-button {
+  height: 20px;
+}
+
+.cart-button {
+height: 20px;
+}
+
+/* Media query for iPhone 12 Pro */
+@media only screen and (max-width: 390px) {
+  .menu-button {
     display: flex;
-    justify-content: space-between;
+  }
+
+  header {
+    background-color: var(--color-secondary-dark);
+  }
+  .inner_header {
+    grid-template-columns: 1fr 7fr 1fr;
+  }
+  .logo_header_desktop {
+    display: none;
+  }
+  .logo{
+    display: none;
+  }
+  .logo-header-mobile {
+    display:flex;
+    text-decoration: none;
+    color: black;
+  }
+  .logo-text{
+    display: flex;
+  }
+  .home, .shop, .about-us, .contact{
+    display: none;
+  }
+  .cart-button, .search-button{
+    height: 24px;
+  }
 }

@@ -165,49 +165,94 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: grid;
     grid-template-columns: 1fr 7fr 1fr;
-}
-
-.inner_header {
+  }
+  
+  .inner_header {
     grid-column: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 16px;
     padding-bottom: 16px;
-}
+  }
+  .menu-button{
+    height: 20px;
+    display: none;
+    padding-right: 12px;
+  }
   
-.logo_header {
+  .logo-header-desktop {
     height: 30px;
-}
   
-.logo {
-    height: 100%;
-}
+  }
+  .logo-header-mobile {
+    display: none;
+  }
   
-.nav_header {
+  .logo {
+    height: 30px;
+  }
+  
+  .nav_header {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-}
+  }
   
-.nav_header li {
+  .nav_header li {
     margin-left: 30px;
-}
+  }
   
-.nav_header a {
+  .nav_header a {
     color: var(--color-secondary-dark);
     text-decoration: none;
     font-size: 18px;
-}
+  }
   
-.search-button {
+  .search-button {
     height: 20px;
-}
+  }
   
-.cart-button {
- height: 20px;
-}
+  .cart-button {
+  height: 20px;
+  }
+  
+  /* Media query for iPhone 12 Pro */
+  @media only screen and (max-width: 390px) {
+    .menu-button {
+      display: flex;
+    }
+    .logo_header_desktop {
+      display: none;
+    }
+    .logo{
+      display: none;
+    }
+    .inner_header{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .logo-header-mobile {
+      display:flex;
+      text-decoration: none;
+      color: var(--color-secondary-dark);
+    
+    }
+    .logo-text{
+      display: flex;
+    }
+    .home, .shop, .about-us, .contact{
+      display: none;
+    }
+    .cart-button, .search-button{
+      height: 24px;
+    }
+    .nav_header li {
+        margin-left: 20px;
+      }
+  }
+  
 
 
 main{
@@ -234,8 +279,8 @@ footer {
     color: var(--white);
     grid-column: 2;
   }
-  footer .line{
-    height: 70px;
+  footer hr {
+    display: none;
   }
   
   footer .icons {
@@ -255,13 +300,51 @@ footer {
     width: 30px;
   }
 
+/* Media query for iPhone 12 Pro */
+@media only screen and (max-width: 390px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-column: 1 / -1;
+    grid-row: 3;
+    background-color: var(--color-secondary);
+    place-items: center; /* This centers the elements both horizontally and vertically */
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  footer h3 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  footer hr {
+    display: inline;
+    grid-column: 1;
+    grid-row: 2;
+    width: 250px;
+    
+  }
+
+  footer .icons {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  footer a {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+  /* Checkout Styles */
   #checkout-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr auto auto 1fr;
     align-items: flex-start;
 }
-  /* Checkout Styles */
+
 #checkout-grid h1{
     grid-column: 1/-1;
     grid-row: 1;
@@ -481,6 +564,15 @@ hr {
     margin: 125px 0 125px 0;
     max-width: 240px;
 }
+/* Media query for iPhone 12 Pro */
+@media only screen and (max-width: 390px) {
+    #checkout-grid h1{
+        
+        justify-self: center;
+        padding-left: 0;
+    }
+}
+
 /* Index Styles */
 #index-grid {
     display: grid;
@@ -585,6 +677,7 @@ hr {
     margin-top: 16px;
 }
 
+
 /* Product List Styles */
 #product-list-grid{
     display: grid;
@@ -686,7 +779,21 @@ hr {
     max-width: 55%;
     padding: 8px;
 }
-
+/* Media query for iPhone 12 Pro */
+@media only screen and (max-width: 390px) {
+    .sort-by{
+        display: none;
+    }
+    #product-list-grid .product-list-header{
+        grid-column: 1/-1;
+        grid-row: 1;
+    }
+    .product-list-preview {
+        max-width: 100%;
+}
+#product-list-grid{
+    grid-template-rows: 2fr auto;}
+}
 
 /* Shopping cart Styles */
 
@@ -948,4 +1055,12 @@ hr {
     font-family: Inter;
     font-weight: 700;
     line-height: 25.20px;
+}
+/* Media query for iPhone 12 Pro */
+@media only screen and (max-width: 390px) {
+    #product-page-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
 }

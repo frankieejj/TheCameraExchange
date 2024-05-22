@@ -44,3 +44,7 @@ for (let i = 0; i < slides.length; i++) {
         currentSlide(i + 1); // Set current slide index when clicked
     });
 }
+
+function removeElement(string) {
+    document.getElementById(string).style.display = "none";
+  }
