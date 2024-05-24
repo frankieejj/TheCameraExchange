@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Camera Exchange</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="script" href="script.js">
 </head>
 <body>
+    <script src="script.js"></script>
+    
     <!-- Header -->
     <header>
         <!-- Inner Header including content -->
@@ -47,25 +48,27 @@
         <!-- Carasole of Images -->
         <div class="carasole">
             <div class="slides fade">
-                <img src="res/carasole-1-large.png" style="width:100%">
+                <img id="desktop-slide" src="res/carasole-1-large.png" style="width:100%">
+                <img id="mobile-slide" src="res/carasole-1-small.png" style="width:100%">
             </div>
             <div class="slides fade">
-                <img src="res/carasole-2-large.png" style="width:100%">
+                <img id="desktop-slide" src="res/carasole-2-large.png" style="width:100%">
+                <img id="mobile-slide" src="res/carasole-2-small.png" style="width:100%">
             </div>
             <div class="slides fade">
-                <img src="res/carasole-3-large.png" style="width:100%">
+                <img id="desktop-slide" src="res/carasole-3-large.png" style="width:100%">
+                <img id="mobile-slide" src="res/carasole-3-small.png" style="width:100%">
             </div>
-        </div>
-
-        <br>
-
-        <!-- Circles to naviage carasole -->
+            <!-- Circles to naviage carasole -->
         <div class="slide-nav">
             <span class="circle" onclick="currentSlide(1)"></span>
             <span class="circle" onclick="currentSlide(2)"></span>
             <span class="circle" onclick="currentSlide(3)"></span>
         </div>
+        </div>
 
+        <!-- <br> -->
+        
         <!-- New Releases section -->
         <div class = "new-releases-title">
             <h2>New releases</h2>
@@ -78,7 +81,7 @@
         </div>
             
         <!-- Product card carasole -->
-        <div class="container">
+        <div class="new-releases">
             <div class="product-cards">
                 <div class="product-card">
                     <img src="res/CanonProgram1.png">

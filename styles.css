@@ -565,6 +565,7 @@ hr {
     margin: 125px 0 125px 0;
     max-width: 240px;
 }
+
 /* Media query for iPhone 12 Pro */
 @media only screen and (max-width: 390px) {
     #checkout-grid h1{
@@ -599,19 +600,51 @@ hr {
 /* Index Styles */
 #index-grid {
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 2fr auto 3fr ;
 }
 
 #index-grid .carasole{
     grid-row: 1;
+    position: relative;
+}
+
+.slides{
+    display:none;
+}
+.slide-nav {
+    position: absolute;
+    bottom: 5rem; /* Position the circles 10px from the bottom */
+    width: 100%;
+    text-align: center;
+  }
+
+.circle {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px 0;
+    background-color: var(--colour-border);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: var(--color-primary);
+} 
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 #index-grid .new-releases-title{
     grid-column: 1/-1;
     grid-row: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
 .new-releases-title h2 {
@@ -624,6 +657,7 @@ hr {
     display: flex;
     align-items: center;
     margin-top: 2px;
+    margin-bottom: 12px;
 }
   
 .discover-more a {
@@ -638,7 +672,7 @@ hr {
     width: 18px;
 }
 
-#index-grid .container{
+#index-grid .new-releases{
     grid-column: 1/-1;
     grid-row: 3;
     display: flex;
@@ -698,6 +732,27 @@ hr {
     color: var(--color-primary);
     font-weight: 700;
     margin-top: 16px;
+}
+#mobile-slide{
+    display: none;
+}
+
+@media only screen and (max-width: 390px) {
+    #mobile-slide{
+        display: block;
+    }
+    #desktop-slide{
+        display: none;
+    }
+    .slides{
+        height: 2rem;
+    }
+    .new-releases{
+        margin-bottom: 1rem;
+    }
+    .slide-nav {
+        bottom: 2rem;
+    }
 }
 
 
@@ -759,6 +814,7 @@ hr {
     padding-top: 8px;
     color: var(--color-secondary-dark);
     font-weight: 700;
+    height: 2.25em;
   }
   
   .product-list-title.expanded {
