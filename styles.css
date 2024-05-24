@@ -713,13 +713,20 @@ hr {
     color: var(--color-secondary-dark);
     font-weight: 700;
     margin: 4px 0;
-    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 3rem;
 }
 
+  
 .product-card-description p {
     color: var(--color-secondary);
     font-weight: 400;
-    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     margin: 8px 0;
     height: 58px;
@@ -732,6 +739,9 @@ hr {
     color: var(--color-primary);
     font-weight: 700;
     margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
 }
 #mobile-slide{
     display: none;
@@ -815,6 +825,7 @@ hr {
     color: var(--color-secondary-dark);
     font-weight: 700;
     height: 2.25em;
+    margin-bottom: -0.5rem;
   }
   
   .product-list-title.expanded {

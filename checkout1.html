@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout-1</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="script" href="script.js">
 </head>
 <body>
     <!-- Header -->
@@ -41,22 +40,28 @@
         </div>
     </header>
     
+    <!-- Grid and contents for First Checkout Page -->
     <main id="checkout-grid">
             <h1>Checkout</h1>
             <img src="res/checkout-1.png"  id="checkout-progress">
 
-            <!-- Checkout Form for Page 1 -->
+            <!-- Checkout Form for Customer Information -->
             <form>
                 <label for="fname"><i class="fa fa-user"></i> First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="John">
+
                 <label for="fname"><i class="fa fa-user"></i> Last Name</label>
                 <input type="text" id="fname" name="lastname" placeholder="Johnson">
+
                 <label for="email"><i class="fa fa-envelope"></i> Email</label>
                 <input type="text" id="fname" name="lastname" placeholder="Johnson">
+
                 <label for="phonenumber"><i class="fa fa-phonenumber"></i> Phone Number</label>
                 <input type="text" id="phonenumber" name="phonenumber" placeholder="0437 948 923">
+
                 <label for="adr"><i class="fa fa-address-card-o"></i> Street Address</label>
                 <input type="text" id="adr" name="address" placeholder="37 Pleasent Street">
+
                 <label for="suburb"><i class="fa fa-institution"></i> Suburb</label>
                 <input type="text" id="suburb" name="suburb" placeholder="Melbourne">
 
@@ -65,11 +70,14 @@
                         <label for="state">State</label>
                         <input type="text" id="state" name="state" placeholder="VIC">
                     </div>
+
                     <div class="col-45">
                         <label for="postcode">Postcode</label>
                         <input type="text" id="postcode" name="postcode" placeholder="3000">
                     </div>
                 </div>
+
+                <!-- Button to Continue to Next Checkout Stage -->
                 <input type="button" value="Next" class="primary-btn" onclick="location.href='/checkout2.html'">
             </form>
     </main>

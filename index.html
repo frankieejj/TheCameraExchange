@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="script.js"></script>
-    
     <!-- Header -->
     <header>
         <!-- Inner Header including content -->
@@ -42,7 +40,7 @@
         </div>
     </header>
 
-    <!-- Grid and contents for Index Page -->
+    <!-- Grid and contents for Home Page -->
     <main id="index-grid">
 
         <!-- Carasole of Images -->
@@ -59,15 +57,16 @@
                 <img id="desktop-slide" src="res/carasole-3-large.png" style="width:100%">
                 <img id="mobile-slide" src="res/carasole-3-small.png" style="width:100%">
             </div>
+            
             <!-- Circles to naviage carasole -->
-        <div class="slide-nav">
-            <span class="circle" onclick="currentSlide(1)"></span>
-            <span class="circle" onclick="currentSlide(2)"></span>
-            <span class="circle" onclick="currentSlide(3)"></span>
+            <div class="slide-nav">
+                <span class="circle" onclick="currentSlide(1)"></span>
+                <span class="circle" onclick="currentSlide(2)"></span>
+                <span class="circle" onclick="currentSlide(3)"></span>
+            </div>
         </div>
-        </div>
-
-        <!-- <br> -->
+        <!-- Script to animate carasole -->
+        <script src="script.js"></script>
         
         <!-- New Releases section -->
         <div class = "new-releases-title">
@@ -80,9 +79,11 @@
             </div>
         </div>
             
-        <!-- Product card carasole -->
+        <!-- Product card carasole of New Releases -->
         <div class="new-releases">
             <div class="product-cards">
+
+                <!-- Product card for a New Released item -->
                 <div class="product-card">
                     <img src="res/CanonProgram1.png">
                     <div class="product-card-description">

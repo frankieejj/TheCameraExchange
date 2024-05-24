@@ -41,17 +41,20 @@
         </div>
     </header>
     
+    <!-- Grid and contents for Third Checkout Page -->
     <main id="checkout-grid">
         <h1>Checkout</h1>
         <img src="res/checkout-3.png"  id="checkout-progress">
 
-        <!-- Checkout Form for Page 3 -->
+        <!-- Checkout Form for Order Review -->
         <form>
+            <!-- Button to Continue to Next Checkout Stage -->
             <input type="button" value="Confirm Order" class="primary-btn" onclick="location.href='/checkout4.html'">
             
             <!-- Order Details -->
             <div class="order-details">
                 <h8>Order Details</h8>
+
                 <hr>
 
                 <!-- Details of each Product in Cart -->
@@ -62,31 +65,36 @@
                         <div class="product-checkout-image">
                             <img src="res/CanonProgram1.png" alt="Canon AE-1 Program w/ 50mm f1.8">
                         </div>
+
                         <h9 class="product-name">Canon AE-1 Program w/ 50mm f1.8</h9>
+
                         <div class="quantity-button">
                             <button class="minus-btn">-</button>
                             <span class="quantity"><h8>1</h8></span>
                             <button class="plus-btn">+</button>
-                        </div>                   
-                         <div class="price"><h9>$495.00</h9></div>
+                        </div> 
+
+                        <div class="price"><h9>$495.00</h9></div>
                     </div>
 
                     <div class="product-checkout-preview">
                         <img class="x" src="res/x.png" alt="Remove" onclick="removeElement()">
-                        
+
                         <div class="product-checkout-image">
                             <img src="res/CanonProgram2.png" alt="Canon AE-1 Program w/ 50mm f1.4">
                         </div>
+
                         <h9 class="product-name">Canon AE-1 Program w/ 50mm f1.4</h9>
+
                         <div class="quantity-button">
                             <button class="minus-btn">-</button>
                             <span class="quantity"><h8>1</h8></span>
                             <button class="plus-btn">+</button>
-                        </div>                   
-                         <div class="price"><h9>$585.00</h9></div>
+                        </div>    
+
+                        <div class="price"><h9>$585.00</h9></div>
                     </div>
                 </div>
-
 
                 <!-- Delivery Address Confirmation -->
                 <div class="checkout-edit"> 
@@ -94,7 +102,9 @@
                         <h8 class="section-title">Delivery Address</h8>
                         <img src="res/edit-pin.png" alt="Edit Information" class="edit-icon" onclick="location.href='checkout1.html'">
                     </div>
+
                     <hr class="divider">
+
                     <div class="payment-details">
                         <p id="name" class="checkout-text">John Johnson</p>
                         <p id="adress1" class="checkout-text">37 Pleasant Street</p>
@@ -108,7 +118,9 @@
                         <h8 class="section-title">Payment Method</h8>
                         <img src="res/edit-pin.png" alt="Edit Information" class="edit-icon" onclick="location.href='checkout2.html'">
                     </div>
+
                     <hr class="divider">
+
                     <div class="payment-details">
                         <p class="checkout-text" id="credit-no">1111-2222-3333-4444</p>
                         <p class="checkout-text" id="credit-name">John Johnson</p>
@@ -124,16 +136,22 @@
                         <h9>Subtotal</h9>
                         <div class="price-summary"><h9>$1,080.00</h9></div>
                     </div>
+
                     <hr>
+
                     <div class="price-information">
                         <h9>Shipping</h9>
                         <div class="price-summary"><h9>$1.99</h9></div>
                     </div>
+
                     <hr>
+                    
                     <div class="price-information">
                         <h7>Total</h7>
                         <div class="price-summary"><h7>$1,081.99</h7></div>
                     </div>
+
+                    <!-- Button to Continue to Next Checkout Stage -->
                     <input type="button" value="Confirm Order" class="primary-btn" onclick="location.href='/checkout4.html'">
                 </div>
         </form>
