@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout-1</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/checkout.css">
 </head>
 <body>
     <!-- Header -->
@@ -29,11 +31,22 @@
             <!-- Right content -->
             <div class="right-header-elements">
                 <ul class="nav_header" id="no-bullets">
-                    <a class="home" href="index.html"> <li>home</li></a>
-                    <a class="shop" href="productlist.html"><li>shop</li></a> 
-                    <a class="about-us" href="#"><li>about us</li></a>
-                    <a class="contact" href="#"><li>contact</li></a>
-                    <a><li><img src="res/search.png" alt="search-button" class="search-button"></li></a>
+                    <a class="home" id="medium-text" href="index.html"> <li>home</li></a>
+                    <a class="shop" id="medium-text" href="productlist.html"><li>shop</li></a> 
+                    <a class="about-us" id="medium-text" href="#"><li>about us</li></a>
+                    <a class="contact" id="medium-text" href="#"><li>contact</li></a>
+                    <li>
+                        <div class="dropdown">
+                            <button onclick="dropdown()" class="dropbtn"><img src="res/search.png" alt="search-button" class="search-button"></button>
+                            <div id="dropdown" class="dropdown-content">
+                                <input type="text" placeholder="Search" id="input" onkeyup="filterFunction()">
+                                <a href="productlist.html">Canon</a>
+                                <a href="#fujifilm">Fujifilm</a>
+                                <a href="#hasselblad">Hasselblad</a>
+                                <a href="#lecia">Lecia</a>
+                            </div>
+                        </div>
+                    </li>
                     <a href="shoppingcart.html"><li><img src="res/shopping-bag.png" alt="cart-button" class="cart-button"></li></a>
                 </ul>
             </div>
@@ -46,47 +59,46 @@
             <img src="res/checkout-1.png"  id="checkout-progress">
 
             <!-- Checkout Form for Customer Information -->
-            <form>
-                <label for="fname"><i class="fa fa-user"></i> First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="John">
+            <form id="checkout-form" action="checkout2.html">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="John" required>
 
-                <label for="fname"><i class="fa fa-user"></i> Last Name</label>
-                <input type="text" id="fname" name="lastname" placeholder="Johnson">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Johnson" required>
 
-                <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                <input type="text" id="fname" name="lastname" placeholder="Johnson">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="john@example.com" required>
 
-                <label for="phonenumber"><i class="fa fa-phonenumber"></i> Phone Number</label>
-                <input type="text" id="phonenumber" name="phonenumber" placeholder="0437 948 923">
+                <label for="phonenumber">Phone Number</label>
+                <input type="text" id="phonenumber" name="phonenumber" placeholder="0437 948 923" required>
 
-                <label for="adr"><i class="fa fa-address-card-o"></i> Street Address</label>
-                <input type="text" id="adr" name="address" placeholder="37 Pleasent Street">
+                <label for="adr">Street Address</label>
+                <input type="text" id="adr" name="address" placeholder="37 Pleasant Street" required>
 
-                <label for="suburb"><i class="fa fa-institution"></i> Suburb</label>
-                <input type="text" id="suburb" name="suburb" placeholder="Melbourne">
+                <label for="suburb">Suburb</label>
+                <input type="text" id="suburb" name="suburb" placeholder="Melbourne" required>
 
                 <div class="row">
                     <div class="col-45">
                         <label for="state">State</label>
-                        <input type="text" id="state" name="state" placeholder="VIC">
+                        <input type="text" id="state" name="state" placeholder="VIC" required>
                     </div>
 
                     <div class="col-45">
                         <label for="postcode">Postcode</label>
-                        <input type="text" id="postcode" name="postcode" placeholder="3000">
+                        <input type="text" id="postcode" name="postcode" placeholder="3000" required>
                     </div>
                 </div>
 
                 <!-- Button to Continue to Next Checkout Stage -->
-                <input type="button" value="Next" class="primary-btn" onclick="location.href='/checkout2.html'">
+                <!-- <input type="next" value="Next" class="primary-btn" onclick="location.href='/checkout2.html'"> -->
+                <button type="submit" class="primary-btn onclick="submitForm()">Next</button>
             </form>
     </main>
 
     <!-- Footer -->
     <footer>
         <h3>The Camera Exchange</h3>
-
-        <hr>
         
         <!-- Footer Icons -->
         <div class="icons">
@@ -97,5 +109,7 @@
             <a href="https://www.facebook.com/cameraexchangemelbourne/?eid=ARDY0bYNv0c2ogtGAsEm14fP2mm8SQceV7m2dc61daZtsbMJRWHISBcGqay6dpKx3cfRuE5MzESbQmg9"><img src="res/facebook.png" alt="Follow Us on Facebook"></a>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

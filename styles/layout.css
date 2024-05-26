@@ -1,0 +1,252 @@
+/* Import colors.css */
+@import url("colours.css");
+
+/* Import typography.css */
+@import url("fonts.css");
+
+/* Import elements.css */
+@import url("elements.css");
+
+
+.root {
+    /* Spacing */
+    --base-font-size: 16px;
+
+    --space-xxxxs: calc(0.125 * var(--base-font-size));  /* Equivalent to 4 pixels */
+    --space-xxxs: calc(0.25 * var(--base-font-size));  /* Equivalent to 4 pixels */
+    --space-xxs: calc(0.375 * var(--base-font-size));  /* Equivalent to 6 pixels */
+    --space-xs: calc(0.5 * var(--base-font-size));     /* Equivalent to 8 pixels */
+    --space-sm: calc(0.75 * var(--base-font-size));    /* Equivalent to 12 pixels */
+    --space-md: var(--base-font-size);                 /* Equivalent to 16 pixels */
+    --space-lg: calc(1.25 * var(--base-font-size));    /* Equivalent to 20 pixels */
+    --space-xl: calc(2 * var(--base-font-size));       /* Equivalent to 32 pixels */
+    --space-xxl: calc(3.25 * var(--base-font-size));   /* Equivalent to 52 pixels */
+    --space-xxxl: calc(5.25 * var(--base-font-size));  /* Equivalent to 84 pixels */
+}
+
+/* Layout for the body of all Pages */
+body{
+    background-color: var(--color-background);
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    grid-template-rows: 1fr 10fr 2fr;
+    margin: 0;
+    height: 100vh;
+}
+
+/* Layout for Header all Pages */
+header {
+    grid-column: 1/-1;
+    background-color: var(--white);
+    box-shadow: 0 0.5vh 1vh var(--colour-grey-2);
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    /* position: fixed; */
+}
+  
+.inner_header {
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.menu-button{
+    height: 2vh;
+    display: none;
+    padding-right: 2vh;
+}
+  
+.logo-header-desktop {
+    height: 2vh;
+}
+
+.logo-header-mobile {
+    display: none;
+}
+  
+.logo {
+    height: 3vh;
+}
+  
+.nav_header {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.nav_header li {
+    margin-left: 3.5vh;
+}
+  
+.nav_header a {
+    color: var(--color-secondary-dark);
+    text-decoration: none;
+}
+  
+.search-button {
+    height: 2.5vh;
+}
+  
+.cart-button {
+    padding-top: 0.25vh;
+    height: 2vh;
+}
+
+.dropbtn {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+}
+
+#input {
+    box-sizing: border-box;
+    background-position: 0.875rem 0.75rem; /* 14px 12px to rem */
+    font-size: 1rem; /* 16px to 1rem */
+    padding: 0.875rem 1.25rem 0.75rem 1.5rem; /* 14px 20px 12px 45px to rem */
+    border: none;
+    border-bottom: 1px solid var(--colour-border);
+}
+
+#input:focus {
+    color: var(--color-secondary);
+    outline: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 14.375rem; /* 230px to 14.375rem */
+    overflow: auto;
+    border-bottom: 1px solid var(--colour-grey-1);
+    border-left: 1px solid var(--colour-grey-1);
+    border-right: 1px solid var(--colour-grey-1);
+    border-radius: 0 0  12px 12px;
+    z-index: 1;
+    top: 2.85rem;
+    left: -12rem;
+}
+
+.dropdown-content a {
+    color: var(--color-secondary-dark);
+    padding: 0.75rem 1rem; /* 12px 16px to rem */
+    text-decoration: none;
+    display: block;
+
+}
+
+.show {
+    display: block;
+}
+
+/* iPhone 12 Pro - Header */
+@media only screen and (max-width: 390px) {
+    .menu-button {
+        display: flex;
+    }
+    .logo_header_desktop {
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    .inner_header{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .logo-header-mobile {
+        display:flex;
+        text-decoration: none;
+    }
+    .logo-text h4{
+        display: flex;
+        color: var(--color-secondary-dark);
+    }
+    .home, .shop, .about-us, .contact{
+        display: none;
+    }
+    .cart-button{
+        height: 2.5vh;
+    }
+    .search-button{
+        height: 2.75vh;
+    }
+    .nav_header li {
+        margin-left: 2vh;
+    }
+}
+
+/* Layout for the main of all Pages */
+main{
+    grid-column: 2/-2;
+    grid-row: 2;
+}
+
+/* Layout for the footer of all Pages */
+footer {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 3fr 1fr;
+    grid-column: 1 / -1;
+    grid-row: 3;
+    background-color: var(--color-secondary);
+    align-items: center;
+}
+  
+footer h3 {
+    margin: 0;
+    color: var(--white);
+    grid-column: 2;
+}
+footer .icons {
+    display: flex;
+    grid-column: 4;
+    justify-content: flex-end;
+}
+footer a {
+    display: inline-block;
+    margin-left: 2vh;
+    color: var(--white);
+}
+footer a img {
+    height: 3.5vh;
+    width: 3.5vh;
+}
+
+/* iPhone 12 Pro - Footer*/
+@media only screen and (max-width: 390px) {
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-column: 1 / -1;
+        grid-row: 3;
+        background-color: var(--color-secondary);
+        place-items: center;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+    footer h3 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    footer .icons {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    footer a {
+        margin-top: 1vh;
+        margin-left: 2vh;
+        margin-right: 2vh;
+    }
+}

@@ -1,0 +1,133 @@
+/* Import colors.css */
+@import url("colours.css");
+
+/* Import typography.css */
+@import url("fonts.css");
+
+/* Import layout.css */
+@import url("layout.css");
+
+/* Layout for the body of Product List Pages */
+#product-list-grid{
+    display: grid;
+    grid-template-rows: 2fr auto 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+#product-list-grid .product-list-header{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.product-list-header h1, 
+.product-list-header p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.product-list-header p{
+    color: var(--color-secondary);
+}
+
+#product-list-grid .sort-by{
+    grid-column: 3;
+    grid-row: 1;
+    align-self: end; 
+    justify-self: end;
+}
+.sort-by img{
+    width: 100%;
+    max-width: 9rem;
+}
+
+#product-list-grid .product-list-product-cards{
+    padding-top: 0.75rem;
+    grid-column: 1/-1;
+    grid-row: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-list-preview {
+    max-width: 14.375rem; 
+    border-radius: 0.75rem;
+    overflow: hidden;
+    padding: 0.75rem;
+    background-color: var(--white);
+    margin-bottom: 1.25rem;
+}
+  
+.product-list-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-top: 0.5rem;
+    color: var(--color-secondary-dark);
+    font-weight: 700;
+    height: 3.25em;
+    margin-bottom: -0.5rem;
+}
+
+.product-list-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    height: 10rem;
+}
+  
+.product-list-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.product-list-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: var(--color-secondary);
+}
+
+.add-to-cart-preview{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+}
+
+#list-button, #list-button-2{
+    max-width: 55%;
+    padding: 0.5rem;
+}
+
+.button-disabled{
+    background-color: var(--color-secondary);
+    cursor: not-allowed;
+    color: var(--white);
+}
+
+.button-addedToCart{
+    cursor: allowed;
+}
+
+/* iPhone 12 Pro - Product List Page Structures */
+@media only screen and (max-width: 390px) {
+    .sort-by{
+        display: none;
+    }
+    #product-list-grid .product-list-header{
+        grid-column: 1/-1;
+        grid-row: 1;
+    }
+    .product-list-preview {
+        max-width: 100%;
+    }
+    #product-list-grid{
+        grid-template-rows: 2fr auto;
+    }
+}

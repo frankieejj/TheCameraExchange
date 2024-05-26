@@ -1,0 +1,105 @@
+/* Primary Font Family for Website */
+@font-face {
+    font-family: 'Feija';
+    src: url('res/test-feijoa-display.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Secondary Font Family for Website */
+@font-face {
+    font-family: 'Inter';
+    src: url('res/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Font Typography for Website */
+.root{
+    --font-primary: 'Feija';
+    --font-secondary: 'Inter';
+    --text-base-sixe: 1rem;
+}
+
+/* Heading Typography for Website */
+h1{
+    font-family: var(--font-primary), serif;
+    size: 56px;
+    line-height: 61.6px;
+    color: var(--color-primary);
+}
+
+h2{
+    font-family: var(--font-primary), serif;
+    size: 48px;
+    line-height: 52.8px;
+}
+
+h3{
+    font-family: var(--font-primary), serif;
+    size: 40px;
+    line-height: 44px;
+    color: var(--color-primary);
+}
+
+h4{
+    font-family: var(--font-primary), serif;
+    size: 32px;
+    line-height: 35.2px;
+}
+
+h5{
+    font-family: var(--font-primary), serif;
+    size: 24px;
+    line-height: 26.4px;
+}
+
+h6{
+    font-family: var(--font-primary), serif;
+    size: 20px;
+    line-height: 22px;
+}
+
+h7{
+    font-family: var(--font-secondary), Poppins, sans-serif;
+    size: 20px;
+    /* line-height: 28px; */
+}
+
+h8{
+    font-family: var(--font-secondary), Poppins, sans-serif;
+    size: 18px;
+    line-height: 25.2px;
+}
+
+h9{
+    font-family: var(--font-secondary), Poppins, sans-serif;
+    size: 16px;
+    line-height: 22.4px;
+}
+
+p{
+    font-family: var(--font-secondary), Poppins, sans-serif;
+    size: 14px;
+}
+
+a{
+    font-family: var(--font-secondary), Poppins, sans-serif;
+}
+
+/* Text IDs for different Paragraph Text Sizes */
+#small-text {
+    font-size: 14px;
+}
+
+#normal-text {
+    font-size: 16px;
+}
+
+#medium-text {
+    font-size: 18px;
+}
+
+#large-text {
+    font-size: 20px;
+}

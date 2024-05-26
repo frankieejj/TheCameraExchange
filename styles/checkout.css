@@ -1,0 +1,230 @@
+/* Import colors.css */
+@import url("colours.css");
+
+/* Import typography.css */
+@import url("fonts.css");
+
+/* Import layout.css */
+@import url("layout.css");
+
+/* Layout for the body of all Checkout Pages */
+#checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto 1fr;
+    align-items: flex-start;
+}
+
+#checkout-grid h1{
+    grid-column: 1/-1;
+    grid-row: 1;
+    padding-left: 11vh;
+}
+
+#checkout-progress{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    grid-column: 2;
+    grid-row: 2;
+    height: 4vh;
+    padding-bottom: 3vh;
+}
+
+#checkout-grid form{
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1vh;
+    width: 100%;
+    max-width: 100%;
+}
+
+#checkout-grid form label {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+    color: var(--color-secondary-dark);
+    font-size: 14px;
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    line-height: 22.40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#checkout-grid form input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 1.5vh;
+    background: var(--white);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px var(--color-border) solid;
+    color: var(--color-secondary);
+    font-size: 1rem;
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    line-height: 1.5rem;
+    box-sizing: border-box;
+}
+
+#checkout-grid .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#checkout-grid .col-45 {
+    flex: 0 0 45%;
+    max-width: 45%;
+    padding-bottom: 2vh;
+    box-sizing: border-box;
+}
+
+#checkout-grid form h8 {
+    font-weight: 700;
+    color: var(--color-secondary-dark);
+}
+
+hr {
+    border: 1px var(--colour-border) solid;
+}
+
+.checkout-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.checkout-edit {
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+
+.delivery-title {
+    width: 100%;
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+.divider {
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.checkout-edit {
+    margin-bottom: 1.25rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-icon {
+    width: 1.438rem;
+    height: 1.313rem;
+}
+
+.payment-details {
+    margin-bottom: 0.625rem;
+}
+
+.checkout-text {
+    font-size: 1rem;
+    color: var(--color-secondary);
+    margin: 0.313rem 0;
+}
+
+.product-checkout-preview{
+    display: none;
+    /* WAS FLEX */
+    justify-content:space-between;
+    align-items: center; 
+    background-color: var(--white);
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.x{
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+.product-checkout-image{
+    width: 5.625rem;
+    height: 4.25rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.product-checkout-image img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+.product-name{
+    font-weight: 700;
+    word-wrap: break-word;
+    color: var(--color-secondary);
+    width: 6.25rem;
+    height: 4.25rem;
+    display: grid;
+	align-items: center;
+}
+
+.price{
+    font-weight: 700;
+    word-wrap: break-word;
+    color: var(--color-secondary-dark);
+}
+
+.order-summary h2 {
+    line-height: 4rem; 
+    margin-bottom: -0.2rem;
+}
+
+.thank-you-image{
+    align-self: center;
+    margin: 10vh 0 10vh 0;
+    max-width: 24vh;
+}
+
+/* iPhone 12 Pro - Checkout Page Structures */
+@media only screen and (max-width: 390px) {
+    #checkout-grid h1{
+        justify-self: center;
+        padding-left: 0;
+    }
+    #checkout-grid form{
+        justify-self: center;
+        width: 75%;
+    }
+    #checkout-grid {
+        grid-template-rows: 2fr auto auto 1fr;
+    }
+    .x{
+        padding-right: 0.25rem;
+    }
+    .product-checkout-image{
+        width: 4.375rem;
+        height: 3.75rem;
+    }
+    .product-name{
+        font-size: 0.75rem;
+        line-height: 1rem;
+        padding-left: 0.25rem;
+    }
+    .price{
+        font-size: 0.75rem;
+    }
+}

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout-3</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="script" href="script.js">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/checkout.css">
 </head>
 <body>
     <!-- Header -->
@@ -30,11 +31,22 @@
             <!-- Right content -->
             <div class="right-header-elements">
                 <ul class="nav_header" id="no-bullets">
-                    <a class="home" href="index.html"> <li>home</li></a>
-                    <a class="shop" href="productlist.html"><li>shop</li></a> 
-                    <a class="about-us" href="#"><li>about us</li></a>
-                    <a class="contact" href="#"><li>contact</li></a>
-                    <a><li><img src="res/search.png" alt="search-button" class="search-button"></li></a>
+                    <a class="home" id="medium-text" href="index.html"> <li>home</li></a>
+                    <a class="shop" id="medium-text" href="productlist.html"><li>shop</li></a> 
+                    <a class="about-us" id="medium-text" href="#"><li>about us</li></a>
+                    <a class="contact" id="medium-text" href="#"><li>contact</li></a>
+                    <li>
+                        <div class="dropdown">
+                            <button onclick="dropdown()" class="dropbtn"><img src="res/search.png" alt="search-button" class="search-button"></button>
+                            <div id="dropdown" class="dropdown-content">
+                                <input type="text" placeholder="Search" id="input" onkeyup="filterFunction()">
+                                <a href="productlist.html">Canon</a>
+                                <a href="#fujifilm">Fujifilm</a>
+                                <a href="#hasselblad">Hasselblad</a>
+                                <a href="#lecia">Lecia</a>
+                            </div>
+                        </div>
+                    </li>
                     <a href="shoppingcart.html"><li><img src="res/shopping-bag.png" alt="cart-button" class="cart-button"></li></a>
                 </ul>
             </div>
@@ -106,9 +118,12 @@
                     <hr class="divider">
 
                     <div class="payment-details">
-                        <p id="name" class="checkout-text">John Johnson</p>
+                        <!-- <p id="name" class="checkout-text">John Johnson</p>
                         <p id="adress1" class="checkout-text">37 Pleasant Street</p>
-                        <p id="adress2" class="checkout-text">Melbourne 3000 VIC</p>
+                        <p id="adress2" class="checkout-text">Melbourne 3000 VIC</p> -->
+                        <p class="checkout-text" id="summary-name"></p>
+                        <p class="checkout-text" id="summary-address-line-1"></p>
+                        <p class="checkout-text" id="summary-address-line-2"></p>
                     </div>
                 </div>
 
@@ -160,8 +175,6 @@
     <!-- Footer -->
     <footer>
         <h3>The Camera Exchange</h3>
-
-        <hr>
         
         <!-- Footer Icons -->
         <div class="icons">
@@ -172,5 +185,6 @@
             <a href="https://www.facebook.com/cameraexchangemelbourne/?eid=ARDY0bYNv0c2ogtGAsEm14fP2mm8SQceV7m2dc61daZtsbMJRWHISBcGqay6dpKx3cfRuE5MzESbQmg9"><img src="res/facebook.png" alt="Follow Us on Facebook"></a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

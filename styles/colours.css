@@ -1,0 +1,50 @@
+/* Colors for Website */
+:root {
+    /* Primary Colour */
+    --color-primary: #F27238;
+
+    /* Secondary Colour */
+    --color-secondary: #536681;
+    --color-secondary-dark:  #3A3F48;
+
+    /* Grey Scale */
+    --black: #000;
+    --colour-grey-3: #E4DEDC;
+    --colour-grey-2: #0000001A;
+    --color-grey-1: #F6F6F6;
+    --white:#fff;
+
+    /* State Colours */
+    --colour-success: #39A430;
+    --colour-warning: #F4BE50;
+    --color-error: #F52424;
+
+    /* Typography Colours */
+    --color-text: var(--color-secondary-dark);
+    --color-text-heading: var(--color-primary);
+    --color-text-subtle: var(--color-secondary);
+    --color-text-link: var(--color-secondary);
+    --color-text-visited: var(--color-secondary-dark);
+
+    /* Border Colour */
+    --color-border: var(--colour-grey-3);
+
+    /* Background Colour */
+    --color-background: var(--color-grey-1);
+
+    /* Forms Colours */
+    --form-element-border: var(--color-border);
+    --form-element-border-focus: var(--colour-grey-2);
+    --form-element-border-error: var(--color-error);
+    --form-element-bg: var(--white);
+    --form-text-placeholder: var(--colour-grey-2);
+
+    /* Button Colours */
+    --bt-primary-bg: var(--color-secondary-dark);
+    --bt-primary-hover: var(--color-secondary);
+    --bt-primary-active: var(--color-secondary-dark);
+    --bt-primary-label: var(--white);
+
+    /* Icon Colours */
+    --colour-icon-primary: var(--color-secondary-dark);
+}

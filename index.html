@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Camera Exchange</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
     <!-- Header -->
@@ -29,11 +30,22 @@
             <!-- Right content -->
             <div class="right-header-elements">
                 <ul class="nav_header" id="no-bullets">
-                    <a class="home" href="index.html"> <li>home</li></a>
-                    <a class="shop" href="productlist.html"><li>shop</li></a> 
-                    <a class="about-us" href="#"><li>about us</li></a>
-                    <a class="contact" href="#"><li>contact</li></a>
-                    <a><li><img src="res/search.png" alt="search-button" class="search-button"></li></a>
+                    <a class="home" id="medium-text" href="index.html"> <li>home</li></a>
+                    <a class="shop" id="medium-text" href="productlist.html"><li>shop</li></a> 
+                    <a class="about-us" id="medium-text" href="#"><li>about us</li></a>
+                    <a class="contact" id="medium-text" href="#"><li>contact</li></a>
+                    <li>
+                        <div class="dropdown">
+                            <button onclick="dropdown()" class="dropbtn"><img src="res/search.png" alt="search-button" class="search-button"></button>
+                            <div id="dropdown" class="dropdown-content">
+                                <input type="text" placeholder="Search" id="input" onkeyup="filterFunction()">
+                                <a href="productlist.html">Canon</a>
+                                <a href="#fujifilm">Fujifilm</a>
+                                <a href="#hasselblad">Hasselblad</a>
+                                <a href="#lecia">Lecia</a>
+                            </div>
+                        </div>
+                    </li>
                     <a href="shoppingcart.html"><li><img src="res/shopping-bag.png" alt="cart-button" class="cart-button"></li></a>
                 </ul>
             </div>
@@ -144,8 +156,6 @@
     <!-- Footer -->
     <footer>
         <h3>The Camera Exchange</h3>
-
-        <hr>
         
         <!-- Footer Icons -->
         <div class="icons">

@@ -1,0 +1,130 @@
+:root{  /* Spacing */ 
+    --space-xxxs: 0.25em;  /* Equivalent to 4 pixels */
+    --space-xxs: 0.375em;  /* Equivalent to 6 pixels */
+    --space-xs: 0.5em;  /* Equivalent to 8 pixels */
+    --space-sm: 0.75em;  /* Equivalent to 12 pixels */
+    --space-md: 1.25em;  /* Equivalent to 20 pixels */
+    --space-lg: 2em;  /* Equivalent to 32 pixels */
+    --space-xl: 3.25em;  /* Equivalent to 52 pixels */ 
+    --space-xxl: 5.25em;  /* Equivalent to 84 pixels */
+    --space-xxxl: 8.5em;  /* Equivalent to 136 pixels */
+}
+
+
+/* Back to Shopping Button */
+.back-to-shopping {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+  
+.back-to-shopping a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+  
+.back-to-shopping a img {
+    height: 18px;
+    width: 18px;
+}
+
+/* Quantity Button */
+.quantity-button {
+    width: max-content;
+    padding: 4px;
+    background: var(--white);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minus-btn, .plus-btn {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: var(--white);
+    font-size: 18px;
+    margin: 0;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.minus-btn::before, .plus-btn::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 5px;
+    top: 5px;
+}
+
+.quantity {
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-secondary-dark);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Button */
+.primary-btn {
+    display: block;
+    width: 100%;
+    padding: 0.5vh;
+    background: var(--color-secondary-dark);
+    border-radius: 12px;
+    overflow: hidden;
+    color: var(--white);
+    font-size: 1.125rem;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    line-height: 25.20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Order Summary  */
+.order-summary {
+    position: relative;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 0px 10px 10px 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.order-summary h2 {
+    color: var(--color-primary);
+    font-weight: 900;
+    margin-bottom: 8px;
+    text-align: center;    
+}
+
+.price-information{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-information h9 {
+    font-weight: 400;
+    color: var(--color-secondary);
+}
+
+.price-information h7{
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+}
+
+.order-summary hr {
+    border: none;
+    border-top: 1px solid var(--color-secondary-dark);
+    margin: 10px 0;
+}

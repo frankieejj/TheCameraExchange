@@ -1,0 +1,66 @@
+/* Import colors.css */
+@import url("colours.css");
+
+/* Import typography.css */
+@import url("fonts.css");
+
+/* Import layout.css */
+@import url("layout.css");
+
+/* Layout for the body of Shopping Cart Page */
+#shopping-cart-grid{
+    display: grid;
+    grid-template-columns: 6fr 1fr 6fr;
+    grid-template-rows: 1fr 1fr auto 1fr;
+}
+
+#shopping-cart-grid .back-to-shopping{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#shopping-cart-grid h1{
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: 50px;
+}
+
+#shopping-cart-grid .shopping-cart-information{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#shopping-cart-grid .order-summary{
+    grid-column: 3;
+    grid-row: 3;
+}
+
+#product-1, #product-2{
+    display: none;
+}
+
+/* iPhone 12 Pro - Shopping Cart Page Structures */
+@media only screen and (max-width: 390px) {
+    #shopping-cart-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto auto auto 1fr;
+    }
+    #shopping-cart-grid .back-to-shopping{
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 0px;
+        margin-top: 20px;
+    }
+    #shopping-cart-grid h1{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #shopping-cart-grid .shopping-cart-information{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #shopping-cart-grid .order-summary{
+        grid-column: 1;
+        grid-row: 4;
+    }
+}

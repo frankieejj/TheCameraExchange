@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="script" href="script.js">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/product-page.css">
 </head>
 <body>
     <!-- Header -->
@@ -30,11 +31,22 @@
             <!-- Right content -->
             <div class="right-header-elements">
                 <ul class="nav_header" id="no-bullets">
-                    <a class="home" href="index.html"> <li>home</li></a>
-                    <a class="shop" href="productlist.html"><li>shop</li></a> 
-                    <a class="about-us" href="#"><li>about us</li></a>
-                    <a class="contact" href="#"><li>contact</li></a>
-                    <a><li><img src="res/search.png" alt="search-button" class="search-button"></li></a>
+                    <a class="home" id="medium-text" href="index.html"> <li>home</li></a>
+                    <a class="shop" id="medium-text" href="productlist.html"><li>shop</li></a> 
+                    <a class="about-us" id="medium-text" href="#"><li>about us</li></a>
+                    <a class="contact" id="medium-text" href="#"><li>contact</li></a>
+                    <li>
+                        <div class="dropdown">
+                            <button onclick="dropdown()" class="dropbtn"><img src="res/search.png" alt="search-button" class="search-button"></button>
+                            <div id="dropdown" class="dropdown-content">
+                                <input type="text" placeholder="Search" id="input" onkeyup="filterFunction()">
+                                <a href="productlist.html">Canon</a>
+                                <a href="#fujifilm">Fujifilm</a>
+                                <a href="#hasselblad">Hasselblad</a>
+                                <a href="#lecia">Lecia</a>
+                            </div>
+                        </div>
+                    </li>
                     <a href="shoppingcart.html"><li><img src="res/shopping-bag.png" alt="cart-button" class="cart-button"></li></a>
                 </ul>
             </div>
@@ -112,8 +124,6 @@
     <footer>
         <h3>The Camera Exchange</h3>
 
-        <hr>
-        
         <!-- Footer Icons -->
         <div class="icons">
             <a href="https://www.google.com/maps/place/The+Camera+Exchange/@-37.834435,145.1347468,15z/data=!4m2!3m1!1s0x0:0x6e31377ce81d4867?sa=X&ved=1t:2428&ictx=111"><img src="res/map-pin.png" alt="Store Location"></a>
