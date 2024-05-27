@@ -1,4 +1,7 @@
-// Script to automatically cycle through carasole slides every 6 seconds
+/**
+* Automatically cycle through slideshow every 6 seconds
+* Source: https://www.w3schools.com/howto/howto_js_slideshow.asp
+*/
 let slideIndex = 0;
 showSlides();
 
@@ -21,12 +24,18 @@ function showSlides() {
   setTimeout(showSlides, 6000);
 }
 
+/**
+* Function to keep track of current slide
+*/
 function currentSlide(n) {
   slideIndex = n;
   updateSlides();
 }
 
-// Script to update carasole slides when the corresponding circle is clicked
+/**
+* Update carasole slides when the corresponding circle is clicked
+* Source: https://www.w3schools.com/howto/howto_js_slideshow.asp
+*/
 function updateSlides() {
   let i;
   let slides = document.getElementsByClassName("slides");
@@ -42,7 +51,7 @@ function updateSlides() {
 }
 
 /**
- * Toggle to display the dropdown menu
+ * Change to display the dropdown menu
  * Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
  */
 function dropdown() {
@@ -68,9 +77,12 @@ function filterFunction() {
   }
 }
 
+/**
+ * Add to Cart Button - clicked, loads, ticks when complete
+ */
 function addToCart1(){
   var button = document.getElementById("list-button");
-  button.value = "\u25cf"; // Change to  3 dots
+  button.value = "\u25cf"; // Change to 1 dots
   button.disabled = true;
   button.classList.add("button-disabled");
   setTimeout(addToCart2,1000);
@@ -82,7 +94,7 @@ function addToCart2(){
 }
 function addToCart3(){
   var button = document.getElementById("list-button");
-  button.value = "\u25cf \u25cf \u25cf"; // Change to 1 dot
+  button.value = "\u25cf \u25cf \u25cf"; // Change to 3 dot
   setTimeout(addedToCart,1000);
 }
 function addedToCart(){
@@ -91,13 +103,11 @@ function addedToCart(){
   button.disabled=false;
   button.classList.add("button-addedToCart");
 }
-
 function SecondAddToCart1(){
   var button = document.getElementById("list-button-2");
-  button.value = "\u25cf"; // Change to  3 dots
+  button.value = "\u25cf"; // Change to 1 dots
   button.disabled = true;
   button.classList.add("button-disabled");
-
   setTimeout(SecondAddToCart2,1000);
 }
 function SecondAddToCart2(){
@@ -107,7 +117,7 @@ function SecondAddToCart2(){
 }
 function SecondAddToCart3(){
   var button = document.getElementById("list-button-2");
-  button.value = "\u25cf \u25cf \u25cf"; // Change to 1 dot
+  button.value = "\u25cf \u25cf \u25cf"; // Change to 3 dot
   setTimeout(SecondAddedToCart,1000);
 }
 function SecondAddedToCart(){
@@ -117,7 +127,10 @@ function SecondAddedToCart(){
   button.classList.add("button-addedToCart");
 }
 
-// Change main image
+/**
+ * Function to change main-image on product page to corresponding thumbnail pressed
+ * @param {*} src Source on image for new main image
+ */
 function changeMainImage(src){
   document.getElementById("main-image").src = src;
 }
