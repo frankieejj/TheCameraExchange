@@ -1,10 +1,6 @@
-/* Import colors.css */
+/* Import Stylesheets - colour, typography and main layout*/
 @import url("colours.css");
-
-/* Import typography.css */
-@import url("fonts.css");
-
-/* Import layout.css */
+@import url("typography.css");
 @import url("layout.css");
 
 /* Layout for the body of Shopping Cart Page */
@@ -35,7 +31,7 @@
     grid-row: 3;
 }
 
-/* iPhone 12 Pro - Shopping Cart Page Structures */
+/* Mobile - Shopping Cart Page Structures */
 @media only screen and (max-width: 390px) {
     #shopping-cart-grid{
         grid-template-columns: 1fr 1fr 1fr;

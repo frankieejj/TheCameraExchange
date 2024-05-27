@@ -1,10 +1,6 @@
-/* Import colors.css */
+/* Import Stylesheets - colour, typography and main layout*/
 @import url("colours.css");
-
-/* Import typography.css */
-@import url("fonts.css");
-
-/* Import layout.css */
+@import url("typography.css");
 @import url("layout.css");
 
 /* Layout for the body of all Checkout Pages */
@@ -15,28 +11,31 @@
     align-items: flex-start;
 }
 
-#checkout-grid h1{
-    grid-column: 1/-1;
+/* Header Styles */
+#checkout-grid h1 {
+    grid-column: 1 / -1;
     grid-row: 1;
     padding-left: 11vh;
 }
 
-#checkout-progress{
+/* Progress Bar Styles */
+#checkout-progress {
     display: flex;
     align-self: center;
     justify-self: center;
     grid-column: 2;
     grid-row: 2;
     height: 4vh;
-    padding-bottom: 3vh;
+    padding-bottom: 5vh;
 }
 
-#checkout-grid form{
+/* Form Styles */
+#checkout-grid form {
     grid-column: 2;
     grid-row: 3;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     gap: 1vh;
     width: 100%;
     max-width: 100%;
@@ -50,7 +49,7 @@
     font-size: 14px;
     font-family: var(--font-secondary);
     font-weight: 400;
-    line-height: 22.40px;
+    line-height: 22.4px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -60,9 +59,8 @@
     width: 100%;
     padding: 1.5vh;
     background: var(--white);
+    border: 1px solid var(--color-border);
     border-radius: 0.75rem;
-    overflow: hidden;
-    border: 1px var(--color-border) solid;
     color: var(--color-secondary);
     font-size: 1rem;
     font-family: var(--font-secondary);
@@ -71,6 +69,12 @@
     box-sizing: border-box;
 }
 
+#checkout-grid form h8 {
+    font-weight: 700;
+    color: var(--color-secondary-dark);
+}
+
+/* Row and Column Styles for Form */
 #checkout-grid .row {
     display: flex;
     flex-direction: row;
@@ -86,25 +90,15 @@
     box-sizing: border-box;
 }
 
-#checkout-grid form h8 {
-    font-weight: 700;
-    color: var(--color-secondary-dark);
-}
-
-hr {
-    border: 1px var(--colour-border) solid;
-}
-
-.checkout-container {
+/* Checkout Confirmation Edit Styles */
+.checkout-container, .checkout-edit {
     width: 100%;
-    height: 100%;
     position: relative;
 }
 
 .checkout-edit {
-    width: 100%;
-    position: relative;
     height: auto;
+    margin-bottom: 1.25rem;
 }
 
 .delivery-title {
@@ -118,8 +112,8 @@ hr {
     margin: 0.5rem 0;
 }
 
-.checkout-edit {
-    margin-bottom: 1.25rem;
+hr {
+    border: 1px solid var(--color-border);
 }
 
 .section-header {
@@ -144,23 +138,23 @@ hr {
 }
 
 .order-summary h2 {
-    line-height: 4rem; 
+    line-height: 4rem;
     margin-bottom: -0.2rem;
 }
 
-.thank-you-image{
+.thank-you-image {
     align-self: center;
-    margin: 10vh 0 10vh 0;
+    margin: 10vh 0;
     max-width: 24vh;
 }
 
-/* iPhone 12 Pro - Checkout Page Structures */
+/* Responsive Styles for iPhone 12 Pro - Checkout Page Structures */
 @media only screen and (max-width: 390px) {
-    #checkout-grid h1{
+    #checkout-grid h1 {
         justify-self: center;
         padding-left: 0;
     }
-    #checkout-grid form{
+    #checkout-grid form {
         justify-self: center;
         width: 75%;
     }

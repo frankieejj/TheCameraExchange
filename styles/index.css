@@ -1,10 +1,6 @@
-/* Import colors.css */
+/* Import Stylesheets - colour, typography and main layout*/
 @import url("colours.css");
-
-/* Import typography.css */
-@import url("fonts.css");
-
-/* Import layout.css */
+@import url("typography.css");
 @import url("layout.css");
 
 /* Layout for the body of all Home Page */
@@ -13,6 +9,7 @@
     grid-template-rows: 2fr auto 3fr ;
 }
 
+/* Carasole Styles */
 #index-grid .carasole{
     grid-row: 1;
     position: relative;
@@ -55,6 +52,7 @@
     to {opacity: 1}
 }
 
+/* New Releases Section Styles */
 #index-grid .new-releases-title{
     grid-column: 1/-1;
     grid-row: 2;
@@ -155,7 +153,7 @@
     display: none;
 }
 
-/* iPhone 12 Pro - Home Page Structures */
+/* Mobile - Home Page Structures */
 @media only screen and (max-width: 390px) {
     #mobile-slide{
         display: block;

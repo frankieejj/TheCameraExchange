@@ -1,10 +1,6 @@
-/* Import colors.css */
+/* Import Stylesheets - colour, typography and main layout*/
 @import url("colours.css");
-
-/* Import typography.css */
-@import url("fonts.css");
-
-/* Import layout.css */
+@import url("typography.css");
 @import url("layout.css");
 
 /* Layout for the body of all Product Page */
@@ -19,6 +15,7 @@
     grid-row: 1;
 }
 
+/* Product Images Style */
 #product-page-grid .product-image-options{
     grid-column: 1;
     grid-row: 2/-2;
@@ -80,6 +77,7 @@
     border-radius: 0.25rem;
 }
 
+/* Product Description Style */
 #product-page-grid .product-description{
     grid-column: 1;
     grid-row: 4;
@@ -171,7 +169,7 @@
     border: none;
 }
 
-/* iPhone 12 Pro - Product Page Structures */
+/* Mobile - Product Page Structures */
 @media only screen and (max-width: 390px) {
     #product-page-grid{
         grid-template-columns: 1fr auto 1fr;

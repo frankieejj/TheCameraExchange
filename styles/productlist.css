@@ -1,10 +1,6 @@
-/* Import colors.css */
+/* Import Stylesheets - colour, typography and main layout*/
 @import url("colours.css");
-
-/* Import typography.css */
-@import url("fonts.css");
-
-/* Import layout.css */
+@import url("typography.css");
 @import url("layout.css");
 
 /* Layout for the body of Product List Pages */
@@ -14,6 +10,7 @@
     grid-template-columns: 1fr 2fr 1fr;
 }
 
+/* Product List Header Styles */
 #product-list-grid .product-list-header{
     grid-column: 2;
     grid-row: 1;
@@ -41,6 +38,8 @@
     width: 100%;
     max-width: 9rem;
 }
+
+/* Product List Product Cards Style */
 
 #product-list-grid .product-list-product-cards{
     padding-top: 0.75rem;
@@ -94,6 +93,7 @@
     color: var(--color-secondary);
 }
 
+/* Add to Cart Style */
 .add-to-cart-preview{
     display: flex;
     justify-content: space-between;
@@ -115,7 +115,7 @@
     cursor: allowed;
 }
 
-/* iPhone 12 Pro - Product List Page Structures */
+/* Mobile - Product List Page Structures */
 @media only screen and (max-width: 390px) {
     .sort-by{
         display: none;

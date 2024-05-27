@@ -1,20 +1,36 @@
-/* Import typography.css */
-@import url("fonts.css");
+/* Import Stylesheets - typography */
+@import url("typography.css");
 
-:root{  /* Spacing */ 
-    --space-xxxs: 0.25em;  /* Equivalent to 4 pixels */
-    --space-xxs: 0.375em;  /* Equivalent to 6 pixels */
-    --space-xs: 0.5em;  /* Equivalent to 8 pixels */
-    --space-sm: 0.75em;  /* Equivalent to 12 pixels */
-    --space-md: 1.25em;  /* Equivalent to 20 pixels */
-    --space-lg: 2em;  /* Equivalent to 32 pixels */
-    --space-xl: 3.25em;  /* Equivalent to 52 pixels */ 
-    --space-xxl: 5.25em;  /* Equivalent to 84 pixels */
-    --space-xxxl: 8.5em;  /* Equivalent to 136 pixels */
+:root{  /* Common Spacing Styles */ 
+    --space-xxxs: 0.25em;  
+    --space-xxs: 0.375em;  
+    --space-xs: 0.5em;  
+    --space-sm: 0.75em; 
+    --space-md: 1.25em;  
+    --space-lg: 2em;  
+    --space-xl: 3.25em;  
+    --space-xxl: 5.25em;  
+    --space-xxxl: 8.5em;
 }
 
+/* Primary Button Style */
+.primary-btn {
+    display: block;
+    width: 100%;
+    padding: 0.5vh;
+    background: var(--color-secondary-dark);
+    border-radius: 12px;
+    overflow: hidden;
+    color: var(--white);
+    font-size: 1.125rem;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    line-height: 25.20px;
+    text-align: center;
+    cursor: pointer;
+}
 
-/* Back to Shopping Button */
+/* Back to Shopping Button Style */
 .back-to-shopping {
     display: flex;
     align-items: center;
@@ -34,7 +50,7 @@
     width: 18px;
 }
 
-/* Quantity Button */
+/* Quantity Button Style */
 .quantity-button {
     width: max-content;
     padding: 4px;
@@ -76,24 +92,7 @@
     padding-right: 10px;
 }
 
-/* Button */
-.primary-btn {
-    display: block;
-    width: 100%;
-    padding: 0.5vh;
-    background: var(--color-secondary-dark);
-    border-radius: 12px;
-    overflow: hidden;
-    color: var(--white);
-    font-size: 1.125rem;
-    font-family: var(--font-secondary);
-    font-weight: 700;
-    line-height: 25.20px;
-    text-align: center;
-    cursor: pointer;
-}
-
-/* Order Summary  */
+/* Order Summary Style */
 .order-summary {
     position: relative;
     background: var(--white);
@@ -132,10 +131,9 @@
     margin: 10px 0;
 }
 
-/* Checkout Product Preview */
+/* Checkout Product Preview Style */
 .product-checkout-preview{
     display: flex;
-    /* WAS FLEX */
     justify-content:space-between;
     align-items: center; 
     background-color: var(--white);
@@ -182,6 +180,7 @@
     margin-left: 1rem;
 }
 
+/* Checkout Product Preview Style for Mobile */
 @media only screen and (max-width: 390px) {
     .product-checkout-image{
         margin-left: 0.2rem;
@@ -201,13 +200,13 @@
     }
 }
 
-/* Checkout Process Bar */
+/* Checkout Process Bar Style */
 .checkout-progress-bar {
     display: flex;
     align-items: center;
-  }
+}
   
-  .circle-checkout {
+.circle-checkout {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -217,25 +216,28 @@
     align-items: center;
     justify-content: center;
     font-size: 1rem;
-  }
+}
   
-  .line-checkout {
+.line-checkout {
     width: 2rem;
     height: 0.1rem;
     border-radius: 1rem;
     background-color: #a9b3c1;
     margin: 0 0.5rem;
-  }
-  .hidden{
-      display: none;
-  }
-  .stage{
+}
+
+.hidden{
+    display: none;
+}
+
+.stage{
     background-color: var(--color-secondary-dark);
-  }
-  .not-stage{
+}
+
+.not-stage{
     background-color: var(--color-secondary);
-  }
-  .text-checkout {
+}
+.text-checkout {
     font-size: 0.8rem;
     color: var(--color-secondary);
     white-space: nowrap;
@@ -245,4 +247,4 @@
     margin-top: 3.5rem;
     margin-right: 1rem;
     font-family: var(--font-secondary);
-  }
+}
