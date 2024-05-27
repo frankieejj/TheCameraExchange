@@ -36,7 +36,7 @@
 }
 
 .product-image {
-    width: 500px;
+    width: 32rem;
     position: relative;
     overflow: hidden;
     border-radius: 0.75rem;
@@ -51,7 +51,7 @@
 }
 
 .product-image .placeholder,
-.thumbnails .thumbnail .placeholder {
+.thumbnails .thumbnail .placeholder{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -70,6 +70,7 @@
     height: 3.875rem;
     position: relative;
     margin: 0 0.625rem;
+    opacity: 0.5;
 }
 
 .thumbnail img {
@@ -77,10 +78,6 @@
     height: auto;
     position: absolute;
     border-radius: 0.25rem;
-}
-
-.thumbnail.low-opacity img {
-    opacity: 0.5; 
 }
 
 #product-page-grid .product-description{

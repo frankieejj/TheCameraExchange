@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout-4</title>
+    <title>Checkout Stage 4</title>
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/checkout.css">
@@ -56,7 +56,25 @@
     <!-- Grid and contents for Final Checkout Page -->
     <main id="checkout-grid">
         <h1>Checkout</h1>
-        <img src="res/checkout-4.png" id="checkout-progress">
+        <!-- <img src="res/checkout-3.png"  id="checkout-progress"> -->
+        <div class="checkout-progress-bar" id="checkout-progress">
+            <div class="circle-checkout stage">1</div>
+            <div class="line-checkout stage"></div>
+            <div class="circle-checkout stage">2</div>
+            <div class="line-checkout stage"></div>
+            <div class="circle-checkout stage">3</div>
+            <div class="line-checkout stage"></div>
+            <div class="circle-checkout stage">4</div>
+        </div>
+        <div class="checkout-progress-bar" id="checkout-progress">
+            <div class="text-checkout">Customer Information</div>
+            <div class="line-checkout hidden"></div>
+            <div class="text-checkout">Payment</div>
+            <div class="line-checkout hidden"></div>
+            <div class="text-checkout">Order review</div>
+            <div class="line-checkout hidden"></div>
+            <div class="text-checkout">Confirmation</div>
+        </div>
 
         <!-- Checkout Confirmation for Page 4 -->
         <form>
@@ -80,5 +98,6 @@
             <a href="https://www.facebook.com/cameraexchangemelbourne/?eid=ARDY0bYNv0c2ogtGAsEm14fP2mm8SQceV7m2dc61daZtsbMJRWHISBcGqay6dpKx3cfRuE5MzESbQmg9"><img src="res/facebook.png" alt="Follow Us on Facebook"></a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -35,32 +35,28 @@
     grid-row: 3;
 }
 
-#product-1, #product-2{
-    display: none;
-}
-
 /* iPhone 12 Pro - Shopping Cart Page Structures */
 @media only screen and (max-width: 390px) {
     #shopping-cart-grid{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr auto auto auto 1fr;
     }
     #shopping-cart-grid .back-to-shopping{
-        grid-column: 1;
+        grid-column: 2;
         grid-row: 1;
         margin-bottom: 0px;
         margin-top: 20px;
     }
     #shopping-cart-grid h1{
-        grid-column: 1;
+        grid-column: 2;
         grid-row: 2;
     }
     #shopping-cart-grid .shopping-cart-information{
-        grid-column: 1;
+        grid-column: 2;
         grid-row: 3;
     }
     #shopping-cart-grid .order-summary{
-        grid-column: 1;
+        grid-column: 2;
         grid-row: 4;
     }
 }

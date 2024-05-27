@@ -6,7 +6,6 @@
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/shoppingcart.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -72,7 +71,7 @@
             <!-- Details of each Product in Cart -->
             <div class="shopping-cart-products">
                 <div class="product-checkout-preview" id="product-1">
-                    <img class="x" id="remove-1"src="res/x.png" alt="Remove" onclick="removeFromCart('state-1')">
+                    <img class="x" id="remove-1"src="res/x.png" alt="Remove">
                     
                     <div class="product-checkout-image">
                         <img src="res/CanonProgram1.png" alt="Canon AE-1 Program w/ 50mm f1.8">
@@ -90,7 +89,7 @@
                 </div>
 
                 <div class="product-checkout-preview" id="product-2">
-                    <img class="x" id="remove-2" src="res/x.png" alt="Remove" onclick="removeFromCart('state-2')">
+                    <img class="x" id="remove-2" src="res/x.png" alt="Remove">
                     
                     <div class="product-checkout-image">
                         <img src="res/CanonProgram2.png" alt="Canon AE-1 Program w/ 50mm f1.4">
@@ -150,13 +149,6 @@
             <a href="https://www.facebook.com/cameraexchangemelbourne/?eid=ARDY0bYNv0c2ogtGAsEm14fP2mm8SQceV7m2dc61daZtsbMJRWHISBcGqay6dpKx3cfRuE5MzESbQmg9"><img src="res/facebook.png" alt="Follow Us on Facebook"></a>
         </div>
     </footer>
-    
-    <script>
-        // On page load, set visibility for both elements
-        window.onload = function() {
-            setProductState('product-1', 'state-1');
-            setProductState('product-2', 'state-2');
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

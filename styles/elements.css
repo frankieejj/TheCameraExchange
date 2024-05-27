@@ -1,3 +1,6 @@
+/* Import typography.css */
+@import url("fonts.css");
+
 :root{  /* Spacing */ 
     --space-xxxs: 0.25em;  /* Equivalent to 4 pixels */
     --space-xxs: 0.375em;  /* Equivalent to 6 pixels */
@@ -128,3 +131,118 @@
     border-top: 1px solid var(--color-secondary-dark);
     margin: 10px 0;
 }
+
+/* Checkout Product Preview */
+.product-checkout-preview{
+    display: flex;
+    /* WAS FLEX */
+    justify-content:space-between;
+    align-items: center; 
+    background-color: var(--white);
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.x{
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+.product-checkout-image{
+    width: 5.625rem;
+    height: 4.25rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-left: 1rem;
+}
+
+.product-checkout-image img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+.product-name{
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: var(--color-secondary);
+    width: 6.25rem;
+	align-items: center;
+    margin-left: 0.5rem;
+}
+
+.price{
+    font-weight: 700;
+    word-wrap: break-word;
+    color: var(--color-secondary-dark);
+    margin-left: 1rem;
+}
+
+@media only screen and (max-width: 390px) {
+    .product-checkout-image{
+        margin-left: 0.2rem;
+        width: 7rem;
+        height: 3.75rem;
+    }
+    .product-name {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        padding-left: 0.25rem;
+    }
+    .price{
+        margin-left: 0.1rem;
+    }
+    .price h9{
+        font-size: 0.75rem;
+    }
+}
+
+/* Checkout Process Bar */
+.checkout-progress-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .circle-checkout {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: var(--white);
+    font-family: var(--font-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  
+  .line-checkout {
+    width: 2rem;
+    height: 0.1rem;
+    border-radius: 1rem;
+    background-color: #a9b3c1;
+    margin: 0 0.5rem;
+  }
+  .hidden{
+      display: none;
+  }
+  .stage{
+    background-color: var(--color-secondary-dark);
+  }
+  .not-stage{
+    background-color: var(--color-secondary);
+  }
+  .text-checkout {
+    font-size: 0.8rem;
+    color: var(--color-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 6rem;
+    margin-top: 3.5rem;
+    margin-right: 1rem;
+    font-family: var(--font-secondary);
+  }

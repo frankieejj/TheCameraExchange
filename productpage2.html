@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Canon AE-1 Program w/ 50mm f1.4</title>
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/product-page.css">
 </head>
@@ -67,19 +66,19 @@
         <!-- Product Images -->
         <div class="product-image-options">
             <div class="product-image">
-                <img src="res/CanonProgram2.png" alt="Canon AE-1 Program w/ 50mm f1.4">
+                <img id="main-image" src="res/CanonProgram2.png" alt="Canon AE-1 Program w/ 50mm f1.4">
             </div>
 
             <!-- Product Image Thumbnails -->
             <div class="thumbnails">
                 <div class="thumbnail">
                     <div class="placeholder"></div>
-                    <img src="res/CanonProgram2.png" alt="Front">
+                    <img src="res/CanonProgram2.png" alt="Front" onclick="changeMainImage('res/CanonProgram2.png')">
                 </div>
 
-                <div class="thumbnail low-opacity">
+                <div class="thumbnail">
                     <div class="placeholder"></div>
-                    <img src="res/CanonProgram2Back.png" alt="Back">
+                    <img src="res/CanonProgram2Back.png" alt="Back" onclick="changeMainImage('res/CanonProgram2Back.png')">
                     <div class="placeholder-shaded"></div>
                 </div>
             </div>
@@ -133,5 +132,6 @@
             <a href="https://www.facebook.com/cameraexchangemelbourne/?eid=ARDY0bYNv0c2ogtGAsEm14fP2mm8SQceV7m2dc61daZtsbMJRWHISBcGqay6dpKx3cfRuE5MzESbQmg9"><img src="res/facebook.png" alt="Follow Us on Facebook"></a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

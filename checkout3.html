@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout-3</title>
+    <title>Checkout Stage 3</title>
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/checkout.css">
@@ -56,7 +56,25 @@
     <!-- Grid and contents for Third Checkout Page -->
     <main id="checkout-grid">
         <h1>Checkout</h1>
-        <img src="res/checkout-3.png"  id="checkout-progress">
+        <!-- <img src="res/checkout-3.png"  id="checkout-progress"> -->
+        <div class="checkout-progress-bar" id="checkout-progress">
+            <div class="circle-checkout stage">1</div>
+            <div class="line-checkout stage"></div>
+            <div class="circle-checkout stage">2</div>
+            <div class="line-checkout stage"></div>
+            <div class="circle-checkout stage">3</div>
+            <div class="line-checkout not-stage"></div>
+            <div class="circle-checkout not-stage">4</div>
+        </div>
+        <div class="checkout-progress-bar" id="checkout-progress">
+            <div class="text-checkout">Customer Information</div>
+            <div class="line-checkout hidden"></div>
+            <div class="text-checkout">Payment</div>
+            <div class="line-checkout hidden"></div>
+            <div class="text-checkout">Order review</div>
+            <div class="line-checkout hidden"></div>
+            <div class="text-checkout">Confirmation</div>
+        </div>
 
         <!-- Checkout Form for Order Review -->
         <form>
@@ -72,7 +90,7 @@
                 <!-- Details of each Product in Cart -->
                 <div class="checkout-container">
                     <div class="product-checkout-preview">
-                        <img class="x" src="res/x.png" alt="Remove" onclick="removeElement()">
+                        <img class="x" src="res/x.png" alt="Remove">
                         
                         <div class="product-checkout-image">
                             <img src="res/CanonProgram1.png" alt="Canon AE-1 Program w/ 50mm f1.8">
@@ -80,7 +98,7 @@
 
                         <h9 class="product-name">Canon AE-1 Program w/ 50mm f1.8</h9>
 
-                        <div class="quantity-button">
+                        <div class="quantity-button small-quantity-button">
                             <button class="minus-btn">-</button>
                             <span class="quantity"><h8>1</h8></span>
                             <button class="plus-btn">+</button>
@@ -90,7 +108,7 @@
                     </div>
 
                     <div class="product-checkout-preview">
-                        <img class="x" src="res/x.png" alt="Remove" onclick="removeElement()">
+                        <img class="x" src="res/x.png" alt="Remove">
 
                         <div class="product-checkout-image">
                             <img src="res/CanonProgram2.png" alt="Canon AE-1 Program w/ 50mm f1.4">
@@ -112,7 +130,7 @@
                 <div class="checkout-edit"> 
                     <div class="section-header">
                         <h8 class="section-title">Delivery Address</h8>
-                        <img src="res/edit-pin.png" alt="Edit Information" class="edit-icon" onclick="location.href='checkout1.html'">
+                        <img src="res/edit.png" alt="Edit Information" class="edit-icon" onclick="location.href='checkout1.html'">
                     </div>
 
                     <hr class="divider">
@@ -131,7 +149,7 @@
                 <div class="checkout-edit">
                     <div class="section-header">
                         <h8 class="section-title">Payment Method</h8>
-                        <img src="res/edit-pin.png" alt="Edit Information" class="edit-icon" onclick="location.href='checkout2.html'">
+                        <img src="res/edit.png" alt="Edit Information" class="edit-icon" onclick="location.href='checkout2.html'">
                     </div>
 
                     <hr class="divider">

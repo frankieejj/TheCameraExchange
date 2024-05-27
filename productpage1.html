@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Canon AE-1 Program w/ 50mm f1.8</title>
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/product-page.css">
 </head>
@@ -67,25 +66,25 @@
         <!-- Product Images -->
         <div class="product-image-options">
             <div class="product-image">
-                <img src="res/CanonProgram1.png" alt="Canon AE-1 Program w/ 50mm f1.8">
+                <img id="main-image" src="res/CanonProgram1.png" alt="Canon AE-1 Program w/ 50mm f1.8">
             </div>
             
             <!-- Product Image Thumbnails -->
             <div class="thumbnails">
                 <div class="thumbnail">
                     <div class="placeholder"></div>
-                    <img src="res/CanonProgram1.png" alt="Front">
+                    <img src="res/CanonProgram1.png" alt="Front" onclick="changeMainImage('res/CanonProgram1.png')">
                 </div>
 
-                <div class="thumbnail low-opacity">
+                <div class="thumbnail">
                     <div class="placeholder"></div>
-                    <img src="res/CanonProgram1Back.png" alt="Back">
+                    <img src="res/CanonProgram1Back.png" alt="Back" onclick="changeMainImage('res/CanonProgram1Back.png')">
                     <div class="placeholder-shaded"></div>
                 </div>
 
-                <div class="thumbnail low-opacity">
+                <div class="thumbnail">
                     <div class="placeholder"></div>
-                    <img src="res/CanonProgram1Top.png" alt="Top">
+                    <img src="res/CanonProgram1Top.png" alt="Top" onclick="changeMainImage('res/CanonProgram1Top.png')">
                 </div>
             </div>
         </div>
@@ -119,8 +118,8 @@
             </div>
 
             <!-- Button to add Product to Shopping Cart -->
-            <input type="button" value="Add to Cart" class="primary-btn" id="medium-text"onclick="changeCartState('state-1')">
-
+            <!-- <input type="button" value="Add to Cart" class="primary-btn" id="medium-text"onclick="changeCartState('state-1')"> -->
+            <input type="button" value="Add to Cart" class="primary-btn" id="button-add" id="medium-text">
             <img src="res/delivery-large-button.png">
         </div>
     </main>
@@ -138,5 +137,6 @@
             <a href="https://www.facebook.com/cameraexchangemelbourne/?eid=ARDY0bYNv0c2ogtGAsEm14fP2mm8SQceV7m2dc61daZtsbMJRWHISBcGqay6dpKx3cfRuE5MzESbQmg9"><img src="res/facebook.png" alt="Follow Us on Facebook"></a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

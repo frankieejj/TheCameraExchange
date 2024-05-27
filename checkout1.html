@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout-1</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Checkout Stage 1</title>
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/checkout.css">
 </head>
@@ -56,7 +55,25 @@
     <!-- Grid and contents for First Checkout Page -->
     <main id="checkout-grid">
             <h1>Checkout</h1>
-            <img src="res/checkout-1.png"  id="checkout-progress">
+            <!-- <img src="res/checkout-1.png"  id="checkout-progress"> -->
+            <div class="checkout-progress-bar" id="checkout-progress">
+                <div class="circle-checkout stage">1</div>
+                <div class="line-checkout not-stage"></div>
+                <div class="circle-checkout not-stage">2</div>
+                <div class="line-checkout not-stage"></div>
+                <div class="circle-checkout not-stage">3</div>
+                <div class="line-checkout not-stage"></div>
+                <div class="circle-checkout not-stage">4</div>
+            </div>
+            <div class="checkout-progress-bar" id="checkout-progress">
+                <div class="text-checkout">Customer Information</div>
+                <div class="line-checkout hidden"></div>
+                <div class="text-checkout">Payment</div>
+                <div class="line-checkout hidden"></div>
+                <div class="text-checkout">Order review</div>
+                <div class="line-checkout hidden"></div>
+                <div class="text-checkout">Confirmation</div>
+            </div>
 
             <!-- Checkout Form for Customer Information -->
             <form id="checkout-form" action="checkout2.html">
