@@ -79,6 +79,13 @@
     border-radius: 0.5rem;
     height: 10rem;
 }
+
+.price {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1vh;
+    font-size: 1.5rem;
+}
   
 .product-list-image img {
     width: 100%;
