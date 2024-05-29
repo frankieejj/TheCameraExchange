@@ -1,4 +1,4 @@
-/* Import Stylesheets - colour, typography and main layout*/
+/* Stylesheets - colour, typography and main layout*/
 @import url("colours.css");
 @import url("typography.css");
 @import url("layout.css");
@@ -98,18 +98,12 @@
 
 .checkout-edit {
     height: auto;
-    margin-bottom: 1.25rem;
 }
 
 .delivery-title {
     width: 100%;
     font-size: 1.125rem;
     margin: 0;
-}
-
-.divider {
-    width: 100%;
-    margin: 0.5rem 0;
 }
 
 hr {
@@ -123,32 +117,37 @@ hr {
 }
 
 .edit-icon {
-    width: 1.438rem;
-    height: 1.313rem;
+    width: 2.5vh;
+    height: 2.5vh;
 }
 
 .payment-details {
-    margin-bottom: 0.625rem;
+    margin-bottom: 1vh;
 }
 
 .checkout-text {
     font-size: 1rem;
     color: var(--color-secondary);
-    margin: 0.313rem 0;
+    margin: 0.5vh 0;
 }
 
 .order-summary h2 {
-    line-height: 4rem;
-    margin-bottom: -0.2rem;
+    line-height: 7vh;
+    margin-bottom: -0.5vh;
 }
 
+/* Thank you Image */
 .thank-you-image {
     align-self: center;
     margin: 10vh 0;
     max-width: 24vh;
 }
 
-/* Responsive Styles for iPhone 12 Pro - Checkout Page Structures */
+.primary-btn{
+    margin-bottom: 3vh;
+}
+
+/* Responsive Styles for Mobile - Checkout Page Structures */
 @media only screen and (max-width: 390px) {
     #checkout-grid h1 {
         justify-self: center;
@@ -156,7 +155,8 @@ hr {
     }
     #checkout-grid form {
         justify-self: center;
-        width: 75%;
+        align-items: center;
+        width: 90%;
     }
     #checkout-grid {
         grid-template-rows: 2fr auto auto 1fr;

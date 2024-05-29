@@ -1,136 +1,154 @@
 /**
 * Automatically cycle through slideshow every 6 seconds
-* Source: https://www.w3schools.com/howto/howto_js_slideshow.asp
+* Inspiration & Help Source: https://www.w3schools.com/howto/howto_js_slideshow.asp
 */
-let slideIndex = 0;
+slideNum = 0;
 showSlides();
-
 function showSlides() {
+  // Define attributes
   let i;
   let slides = document.getElementsByClassName("slides");
   let circles = document.getElementsByClassName("circle");
+
+  // for each slide in carasole: set display to none
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
+
+  // increase index of slides
+  slideNum++;
+
+  // when index has reached end of slides: bring index back to 1
+  if (slideNum > slides.length) {
+    slideNum = 1;
   }
+
+  // for each circle in carasole navigation: deactivate
   for (i = 0; i < circles.length; i++) {
-    circles[i].className = circles[i].className.replace(" active", "");
+    circles[i].style.backgroundColor = "#E4DEDC";
   }
-  slides[slideIndex - 1].style.display = "block";  
-  circles[slideIndex - 1].className += " active";
+
+  // current index: make corresponding slide and circle active
+  slides[slideNum - 1].style.display = "block";  
+  circles[slideNum - 1].style.backgroundColor = "#F27238";
+
+  // redo method every 6 seconds
   setTimeout(showSlides, 6000);
 }
 
 /**
-* Function to keep track of current slide
+* Function to keep track of current slide and trigger update slides
 */
 function currentSlide(n) {
-  slideIndex = n;
+  slideNum = n;
   updateSlides();
 }
 
 /**
 * Update carasole slides when the corresponding circle is clicked
-* Source: https://www.w3schools.com/howto/howto_js_slideshow.asp
+* Inspiration & Help Source: https://www.w3schools.com/howto/howto_js_slideshow.asp
 */
 function updateSlides() {
+  // Define attributes
   let i;
   let slides = document.getElementsByClassName("slides");
   let circles = document.getElementsByClassName("circle");
+
+  // for each slide in carasole: set display to none
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
+
+  // for each circle in carasole navigation: deactivate
   for (i = 0; i < circles.length; i++) {
-    circles[i].className = circles[i].className.replace(" active", "");
+    circles[i].style.backgroundColor = "#E4DEDC";
   }
-  slides[slideIndex - 1].style.display = "block";  
-  circles[slideIndex - 1].className += " active";
+
+  // activate slide depending on input of user
+  slides[slideNum - 1].style.display = "block";  
+  circles[slideNum - 1].style.backgroundColor = "#F27238";
 }
 
 /**
- * Change to display the dropdown menu
- * Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
+ * Change to display the dropdown search button
+ * Inspiration & Help Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
  */
-function dropdown() {
+function dropdownSearch() {
   document.getElementById("dropdown").classList.toggle("show");
 }
 
 /**
-* Filter the dropdown menu items based on user input
+* Filter the dropdown search button items based on user input
 * Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
 */
-function filterFunction() {
+function filterSearchResults() {
+  // Define attributes
   const input = document.getElementById("input");
-  const filter = input.value.toUpperCase();
-  const div = document.getElementById("dropdown");
-  const a = div.getElementsByTagName("a");
-  for (let i = 0; i < a.length; i++) {
-      const txtValue = a[i].textContent || a[i].innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          a[i].style.display = "";
-      } else {
-          a[i].style.display = "none";
-      }
+  const userSearched = input.value.toUpperCase();
+  const pages = document.getElementById("dropdown").getElementsByTagName("a");
+
+  // show or hide pages depending on user input
+  for (let i = 0; i < pages.length; i++) {
+    const pageTitle = pages[i].textContent || pages[i].innerText;
+    if (pageTitle.toUpperCase().indexOf(userSearched)>-1){
+      pages[i].style.display = "";
+    } else {
+      pages[i].style.display = "none";
+    }
   }
 }
 
 /**
  * Add to Cart Button - clicked, loads, ticks when complete
  */
-function addToCart1(){
-  var button = document.getElementById("list-button");
-  button.value = "\u25cf"; // Change to 1 dots
-  button.disabled = true;
-  button.classList.add("button-disabled");
-  setTimeout(addToCart2,1000);
-}
-function addToCart2(){
-  var button = document.getElementById("list-button");
-  button.value = "\u25cf \u25cf"; // Change to 2 dots
-  setTimeout(addToCart3,1000);
-}
-function addToCart3(){
-  var button = document.getElementById("list-button");
-  button.value = "\u25cf \u25cf \u25cf"; // Change to 3 dot
-  setTimeout(addedToCart,1000);
-}
-function addedToCart(){
-  var button = document.getElementById("list-button");
-  button.value = "\u2713"; // Change to a Tick when added
-  button.disabled=false;
-  button.classList.add("button-addedToCart");
-}
-function SecondAddToCart1(){
-  var button = document.getElementById("list-button-2");
-  button.value = "\u25cf"; // Change to 1 dots
-  button.disabled = true;
-  button.classList.add("button-disabled");
-  setTimeout(SecondAddToCart2,1000);
-}
-function SecondAddToCart2(){
-  var button = document.getElementById("list-button-2");
-  button.value = "\u25cf \u25cf"; // Change to 2 dots
-  setTimeout(SecondAddToCart3,1000);
-}
-function SecondAddToCart3(){
-  var button = document.getElementById("list-button-2");
-  button.value = "\u25cf \u25cf \u25cf"; // Change to 3 dot
-  setTimeout(SecondAddedToCart,1000);
-}
-function SecondAddedToCart(){
-  var button = document.getElementById("list-button-2");
-  button.value = "\u2713"; // Change to a Tick when added
-  button.disabled=false;
-  button.classList.add("button-addedToCart");
+function addToCart(id){
+  var button=document.getElementById(id);
+  button.value = "\u25cf"; // Loads with 1 dot
+  button.style.backgroundColor = "#536681";
+  setTimeout(()=>{
+    button.value = "\u25cf \u25cf"; // Loads with 2 dots
+    setTimeout(()=>{
+      button.value = "\u25cf \u25cf \u25cf"; // Loads with 3 dots
+      setTimeout(()=>{
+        button.value = "\u2713"; // Confirms with a tick
+      }, 500);
+    }, 500);
+  }, 500); // every 0.5 seconds
 }
 
 /**
  * Function to change main-image on product page to corresponding thumbnail pressed
- * @param {*} src Source on image for new main image
  */
 function changeMainImage(src){
   document.getElementById("main-image").src = src;
+}
+
+/**
+ * Function to add and minus with Quantity Button
+ */
+function increaseQuantity(element) {
+  // Define attributes
+  var quantity = element.previousElementSibling.querySelector('#quantity-value');
+  var quantityValue = parseInt(quantity.textContent);
+
+  // Add quantity
+  quantity.textContent = quantityValue + 1;
+}
+
+function decreaseQuantity(element) {
+  // Define attributes
+  var quantity = element.nextElementSibling.querySelector('#quantity-value');
+  var quantityValue = parseInt(quantity.textContent);
+
+  // As long as not less than one: minus quantity
+  if (quantityValue > 1) {
+    quantity.textContent = quantityValue - 1;
+  }
+}
+
+/**
+ * Delete all local storage when session is complete
+ */
+function deleteCart() {
+  localStorage.clear();
 }

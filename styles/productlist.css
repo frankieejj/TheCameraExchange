@@ -34,13 +34,13 @@
     align-self: end; 
     justify-self: end;
 }
+
 .sort-by img{
     width: 100%;
     max-width: 9rem;
 }
 
 /* Product List Product Cards Style */
-
 #product-list-grid .product-list-product-cards{
     padding-top: 0.75rem;
     grid-column: 1/-1;
@@ -68,7 +68,8 @@
     color: var(--color-secondary-dark);
     font-weight: 700;
     height: 3.25em;
-    margin-bottom: -0.5rem;
+    margin-bottom: -1.5rem;
+    font-size: 1.2rem;
 }
 
 .product-list-image {
@@ -100,7 +101,7 @@
     padding-left: 0.5rem;
 }
 
-#list-button, #list-button-2{
+#list-button, #list-button-2, #3{
     max-width: 55%;
     padding: 0.5rem;
 }
@@ -118,11 +119,12 @@
 /* Mobile - Product List Page Structures */
 @media only screen and (max-width: 390px) {
     .sort-by{
-        display: none;
+        width: 200%;
     }
     #product-list-grid .product-list-header{
         grid-column: 1/-1;
         grid-row: 1;
+        padding-bottom: 5vh;
     }
     .product-list-preview {
         max-width: 100%;

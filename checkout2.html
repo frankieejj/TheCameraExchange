@@ -36,9 +36,9 @@
                     <a class="contact" id="medium-text" href="#"><li>contact</li></a>
                     <li>
                         <div class="dropdown">
-                            <button onclick="dropdown()" class="dropbtn"><img src="res/search.png" alt="search-button" class="search-button"></button>
+                            <button onclick="dropdownSearch()" class="dropbtn"><img src="res/search.png" alt="search-button" class="search-button"></button>
                             <div id="dropdown" class="dropdown-content">
-                                <input type="text" placeholder="Search" id="input" onkeyup="filterFunction()">
+                                <input type="text" placeholder="Search" id="input" onkeyup="filterSearchResults()">
                                 <a href="productlist.html">Canon</a>
                                 <a href="#fujifilm">Fujifilm</a>
                                 <a href="#hasselblad">Hasselblad</a>
@@ -77,27 +77,28 @@
         </div>
 
         <!-- Checkout Form for Payment Information -->
-        <form>
+        <form id="checkout-form" action="checkout3.html">
             <label for="cname">Name on Card</label>
-            <input type="text" id="cname" name="cardname" placeholder="John Johnson">
+            <input type="text" id="cname" name="cardname" placeholder="John Johnson" required>
 
             <label for="ccnum">Credit Card Number</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
             
             <div class="row">
               <div class="col-45">
                 <label for="expdate">Expiry Date</label>
-                <input type="text" id="expdate" name="expdate" placeholder="12/2024">
+                <input type="text" id="expdate" name="expdate" placeholder="12/2024" required>
               </div>
 
               <div class="col-45">
                 <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="352">
+                <input type="text" id="cvv" name="cvv" placeholder="352" required>
               </div>
             </div>
 
             <!-- Button to Continue to Next Checkout Stage -->
-            <input type="button" value="Next" class="primary-btn" onclick="location.href='/checkout3.html'">
+            <!-- <input type="button" value="Next" class="primary-btn" onclick="location.href='/checkout3.html'"> -->
+            <button type="submit" class="primary-btn onclick="submitForm()">Next</button>
         </form>
     </main>
     

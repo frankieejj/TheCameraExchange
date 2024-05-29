@@ -36,9 +36,9 @@
                     <a class="contact" id="medium-text" href="#"><li>contact</li></a>
                     <li>
                         <div class="dropdown">
-                            <button onclick="dropdown()" class="dropbtn"><img src="res/search.png" alt="search-button" class="search-button"></button>
+                            <button onclick="dropdownSearch()" class="dropbtn"><img src="res/search.png" alt="search-button" class="search-button"></button>
                             <div id="dropdown" class="dropdown-content">
-                                <input type="text" placeholder="Search" id="input" onkeyup="filterFunction()">
+                                <input type="text" placeholder="Search" id="input" onkeyup="filterSearchResults()">
                                 <a href="productlist.html">Canon</a>
                                 <a href="#fujifilm">Fujifilm</a>
                                 <a href="#hasselblad">Hasselblad</a>
@@ -69,8 +69,8 @@
         <div class="shopping-cart-information">
 
             <!-- Details of each Product in Cart -->
-            <div class="shopping-cart-products">
-                <div class="product-checkout-preview" id="product-1">
+            <div class="shopping-cart-products" id="cart-items">
+                <!-- <div class="product-checkout-preview" id="product-1">
                     <img class="x" id="remove-1"src="res/x.png" alt="Remove">
                     
                     <div class="product-checkout-image">
@@ -104,7 +104,7 @@
                     </div>      
 
                     <div class="price"><h9>$585.00</h9></div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -114,7 +114,7 @@
 
             <div class="price-information">
                 <h9>Subtotal</h9>
-                <div class="price-summary"><h9>$1,080.00</h9></div>
+                <div class="price-summary" id="price-summary"><h9>$0.00</h9></div>
             </div>
 
             <hr>
@@ -128,11 +128,11 @@
 
             <div class="price-information">
                 <h7>Total</h7>
-                <div class="price-summary"><h7>$1,081.99</h7></div>
+                <div class="price-summary" id="total-price-summary"><h7>$1.99</h7></div>
             </div>
 
             <!-- Button to Continue to Checkout Stage -->
-            <input type="button" value="Proceed to Checkout" class="primary-btn" onclick="location.href='/checkout1.html'">
+            <input type="button" value="Proceed to Checkout" class="primary-btn" onclick="location.href='checkout1.html'">
         </div>
     </main>
 
@@ -149,6 +149,6 @@
             <a href="https://www.facebook.com/cameraexchangemelbourne/?eid=ARDY0bYNv0c2ogtGAsEm14fP2mm8SQceV7m2dc61daZtsbMJRWHISBcGqay6dpKx3cfRuE5MzESbQmg9"><img src="res/facebook.png" alt="Follow Us on Facebook"></a>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="shoppingcart.js"></script>
 </body>
 </html>

@@ -21,25 +21,25 @@
 
 .slide-nav {
     position: absolute;
-    bottom: 5rem; 
+    bottom: 9vh; 
     width: 100%;
     text-align: center;
 }
 
 .circle {
     cursor: pointer;
-    height: 0.75rem;
-    width: 0.75rem;
+    height: 1vh;
+    width: 1vh;
     margin: 0 0.125rem 0;
-    background-color: var(--color-border);
+    /* background-color: var(--color-border); */
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
-.active {
+/* .active {
     background-color: var(--color-primary);
-} 
+}  */
 
 /* Fading animation */
 .fade {
@@ -67,7 +67,7 @@
 .discover-more {
     display: flex;
     align-items: center;
-    margin-top: 0.125rem;
+    margin-top: 0.2vh;
     margin-bottom: 0.75rem;
 }
   

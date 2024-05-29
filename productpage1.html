@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canon AE-1 Program w/ 50mm f1.8</title>
     <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/product-page.css">
+    <link rel="stylesheet" href="styles/productpage.css">
 </head>
 <body>
     <!-- Header -->
@@ -36,9 +36,9 @@
                     <a class="contact" id="medium-text" href="#"><li>contact</li></a>
                     <li>
                         <div class="dropdown">
-                            <button onclick="dropdown()" class="dropbtn"><img src="res/search.png" alt="search-button" class="search-button"></button>
+                            <button onclick="dropdownSearch()" class="dropbtn"><img src="res/search.png" alt="search-button" class="search-button"></button>
                             <div id="dropdown" class="dropdown-content">
-                                <input type="text" placeholder="Search" id="input" onkeyup="filterFunction()">
+                                <input type="text" placeholder="Search" id="input" onkeyup="filterSearchResults()">
                                 <a href="productlist.html">Canon</a>
                                 <a href="#fujifilm">Fujifilm</a>
                                 <a href="#hasselblad">Hasselblad</a>
@@ -97,13 +97,13 @@
         <!-- Product Name Information -->
         <div class="product-information">
             <h7>Canon</h7>
-            <h1>Canon AE-1 Program w/ 50mm f1.8</h1>
+            <h1 id="product-name">Canon AE-1 Program w/ 50mm f1.8</h1>
         </div>
 
         <!-- Product Price Information -->
         <div class="product-price-information">
             <div class="product-price">
-                <h3>$495.00</h3>
+                <h3>$</h3><h3 id="price">495.00</h3>
                 <h9>Inc GST</h9>
             </div>
 
@@ -111,15 +111,15 @@
                 <h7>Select Quantity:</h7>
 
                 <div class="quantity-button">
-                    <button class="minus-btn">-</button>
-                    <span class="quantity"><h8>1</h8></span>
-                    <button class="plus-btn">+</button>
+                    <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                    <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                    <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                 </div>
             </div>
 
             <!-- Button to add Product to Shopping Cart -->
             <!-- <input type="button" value="Add to Cart" class="primary-btn" id="medium-text"onclick="changeCartState('state-1')"> -->
-            <input type="button" value="Add to Cart" class="primary-btn" id="button-add" id="medium-text">
+            <input type="button" value="Add to Cart" class="primary-btn" id="button-add" id="medium-text" onclick="addToCart('button-add')">
             <img src="res/delivery-large-button.png">
         </div>
     </main>
@@ -137,6 +137,6 @@
             <a href="https://www.facebook.com/cameraexchangemelbourne/?eid=ARDY0bYNv0c2ogtGAsEm14fP2mm8SQceV7m2dc61daZtsbMJRWHISBcGqay6dpKx3cfRuE5MzESbQmg9"><img src="res/facebook.png" alt="Follow Us on Facebook"></a>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="productpage1.js"></script>
 </body>
 </html>

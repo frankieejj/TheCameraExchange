@@ -36,9 +36,9 @@
                     <a class="contact" id="medium-text" href="#"><li>contact</li></a>
                     <li>
                         <div class="dropdown">
-                            <button onclick="dropdown()" class="dropbtn"><img src="res/search.png" alt="search-button" class="search-button"></button>
+                            <button onclick="dropdownSearch()" class="dropbtn"><img src="res/search.png" alt="search-button" class="search-button"></button>
                             <div id="dropdown" class="dropdown-content">
-                                <input type="text" placeholder="Search" id="input" onkeyup="filterFunction()">
+                                <input type="text" placeholder="Search" id="input" onkeyup="filterSearchResults()">
                                 <a href="productlist.html">Canon</a>
                                 <a href="#fujifilm">Fujifilm</a>
                                 <a href="#hasselblad">Hasselblad</a>
@@ -81,13 +81,13 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
-
+                    
                     <!-- Button to add Product to Shopping Cart -->
-                    <input type="button" id="list-button" value="Add to Cart" class="primary-btn" onclick="addToCart1()">
+                    <input type="button" id="1" value="Add to Cart" class="primary-btn" onclick="addToCart('1')">
                 </div>
             </div>
 
@@ -106,13 +106,13 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
-                    <input type="button" id="list-button-2" value="Add to Cart" class="primary-btn" onclick="SecondAddToCart1()">
+                    <input type="button" id="2" value="Add to Cart" class="primary-btn" onclick="addToCart('2')">
                 </div>
             </div>
 
@@ -131,13 +131,13 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
-                    <input type="button" id="list-button" value="Add to Cart" class="primary-btn" >
+                    <input type="button" id="3" value="Add to Cart" class="primary-btn" onclick="addToCart('3')">
                 </div>
             </div>
 
@@ -156,9 +156,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -181,13 +181,13 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
-                    <input type="button" id="list-button" value="Add to Cart" class="primary-btn">
+                    <input type="button" id="4" value="Add to Cart" class="primary-btn" onclick="addToCart('4')">
                 </div>
             </div>
 
@@ -206,13 +206,13 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
-                    <input type="button" id="list-button" value="Add to Cart" class="primary-btn">
+                    <input type="button" id="5" value="Add to Cart" class="primary-btn" onclick="addToCart('5')">
                 </div>
             </div>
 
@@ -231,9 +231,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -256,9 +256,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -281,9 +281,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -306,9 +306,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -331,9 +331,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -356,9 +356,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -381,9 +381,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -406,9 +406,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -431,9 +431,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -456,9 +456,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -481,9 +481,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -506,9 +506,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -531,9 +531,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -556,9 +556,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -581,9 +581,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -606,9 +606,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -631,9 +631,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
 
                     <!-- Button to add Product to Shopping Cart -->
@@ -656,9 +656,9 @@
 
                 <div class="add-to-cart-preview">
                     <div class="quantity-button">
-                        <button class="minus-btn">-</button>
-                        <span class="quantity"><h8>1</h8></span>
-                        <button class="plus-btn">+</button>
+                        <button class="minus-btn" onclick="decreaseQuantity(this)">-</button>
+                        <span class="quantity"><h8 id="quantity-value">1</h8></span>
+                        <button class="plus-btn" onclick="increaseQuantity(this)">+</button>
                     </div>
                     
                     <!-- Button to add Product to Shopping Cart -->

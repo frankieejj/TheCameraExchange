@@ -73,7 +73,7 @@ header {
 }
   
 .cart-button {
-    padding-top: 0.25vh;
+    padding-top: 0.45vh;
     height: 2vh;
 }
 
@@ -157,9 +157,11 @@ header {
     }
     .cart-button{
         height: 2.5vh;
+        padding-top: 0.4vh;
     }
     .search-button{
         height: 2.75vh;
+        padding-top: 0.2vh;
     }
     .nav_header li {
         margin-left: 2vh;
@@ -180,6 +182,7 @@ footer {
     grid-row: 3;
     background-color: var(--color-secondary);
     align-items: center;
+    min-height: 15vh;
 }
   
 footer h3 {
