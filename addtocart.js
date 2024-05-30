@@ -1,5 +1,7 @@
 /**
  * Add to Cart Button - clicked, loads, ticks when complete and adds all product information to local storage
+ * W3Schools. (n.d.). Window localStorage Property. Retrieved from https://www.w3schools.com/jsref/prop_win_localstorage.asp
+ * freeCodeCamp Forum. (n.d.). How do I save the items of a shopping cart in the local storage?. Retrieved from https://forum.freecodecamp.org/t/how-do-i-save-the-items-of-a-shopping-cart-in-the-local-storage/254745/3
  */
 function addToCart(id) {
     // display to user the loading and completion of input

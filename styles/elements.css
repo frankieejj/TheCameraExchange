@@ -56,7 +56,7 @@
     border-radius: 50%;
     background: var(--color-primary);
     color: var(--white);
-    font-size: 18px;
+    font-size: 1rem;
     margin: 0;
     display: flex; 
     align-items: center; 
@@ -103,13 +103,16 @@
 .price-information h7{
     font-weight: 700;
     color: var(--color-primary);
-    margin-bottom: 0.75rem;
 }
 
 .order-summary hr {
     border: none;
     border-top: 1px solid var(--color-secondary);
     margin: 0.75rem 0;
+}
+
+.order-summary .primary-btn{
+    margin-top: 2vh;
 }
 
 /* Checkout Product Preview Style */
@@ -165,8 +168,12 @@
 
 /* Checkout Product Preview Style for Mobile */
 @media only screen and (max-width: 390px) {
+    .order-summary {
+        max-height: 27vh;
+        width: 40vh;
+    }
     .product-checkout-preview{
-        width: 30vh;
+        width: 36.2vh;
     }
     .product-checkout-image{
         width: 8vh;
@@ -185,7 +192,7 @@
         margin-left: 1vh;
     }
     .price h9{
-        font-size: 0.75rem;
+        font-size: 1rem;
     }
 }
 
@@ -237,4 +244,9 @@
     margin-top: 8vh;
     margin-right: 1rem;
     font-family: var(--font-secondary);
+
+}
+
+a {
+    text-decoration: none;
 }

@@ -1,5 +1,7 @@
 /**
- * Function of generating a summary of product cards of user's purchases
+ * Function of generating a cart summary of product from user's purchases
+ * W3Schools. (n.d.). Window localStorage Property. Retrieved from https://www.w3schools.com/jsref/prop_win_localstorage.asp
+ * freeCodeCamp Forum. (n.d.). How do I save the items of a shopping cart in the local storage?. Retrieved from https://forum.freecodecamp.org/t/how-do-i-save-the-items-of-a-shopping-cart-in-the-local-storage/254745/3
  */
 document.addEventListener('DOMContentLoaded', function() {
     // get all information about cart from local storage
@@ -11,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // summary prices
     let subTotal = 0;
 
-    // if cart is not null and has items: create product summaries according to information in local storage
+    // if cart is not null and has items: create product summaries according to 
+    // information in local storage
     if (cart && cart.length > 0) {
         cart.forEach(function(product) {
             // create product card
@@ -24,7 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const x = document.createElement('img');
             x.classList.add('x');
             x.src = 'res/x.png';
-            x.addEventListener('click', removeProduct);
+            x.addEventListener('click', function() {
+                // Remove card - by hiding
+                card.style.display = 'none';
+            });
             
 
             const image = document.createElement('div');
@@ -66,21 +72,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const totalOrderSummary = document.getElementById('total-price-summary');
         totalOrderSummary.innerHTML = '<h7>$' + (subTotal + 1.99).toFixed(2) + '</h7>';
+
     } else {
-        // cart is empty: place empty cart notification to user
+        // cart is empty: place empty cart image in space for cart summary
         const emptyCart = document.createElement('img');
         emptyCart.src = 'res/empty-cart.png';
         emptyCart.style.width = '60%';
-        emptyCart.style.margin = '0 6vh';
+        emptyCart.style.marginLeft = '9vh';
         cartSummary.appendChild(emptyCart);
     }
 });
-
-/**
- * Remove Product from Shopping Cart
- */
-function removeProduct(id){
-    productId = 'product-' + id;
-    const remove = document.getElementById(productId);
-    remove.style.display = 'none';
-}

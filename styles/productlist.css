@@ -37,7 +37,7 @@
 
 .sort-by img{
     width: 100%;
-    max-width: 9rem;
+    max-width: 15vh;
 }
 
 /* Product List Product Cards Style */
@@ -125,8 +125,8 @@
 
 /* Mobile - Product List Page Structures */
 @media only screen and (max-width: 390px) {
-    .sort-by{
-        width: 200%;
+    .sort-by {
+        width: 15vh;
     }
     #product-list-grid .product-list-header{
         grid-column: 1/-1;

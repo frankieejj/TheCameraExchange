@@ -17,7 +17,7 @@
                 <a href="index.html" class="logo-header-desktop">
                     <img src="res/logowithtext.png" alt="logo" class="logo">
                 </a>
-                <a href="productlist.html"><img src="res/menu-button.png" alt="menu-button" class="menu-button"></a>
+                <a><img src="res/menu-button.png" alt="menu-button" class="menu-button"></a>
             </div>
 
             <!-- Center content -->
@@ -51,6 +51,7 @@
             </div>
         </div>
     </header>
+    <script src="searchbar.js"></script>
     
     <!-- Grid and contents for Third Checkout Page -->
     <main id="checkout-grid">
@@ -67,9 +68,11 @@
             <div class="circle-checkout not-stage">4</div>
         </div>
         <div class="checkout-progress-bar" id="checkout-progress">
-            <div class="text-checkout">Customer Information</div>
+            <!-- checkout 1: now clickable to adjust entires to form -->
+            <a href="checkout1.html"><div class="text-checkout">Customer Information</div></a>
             <div class="line-checkout hidden"></div>
-            <div class="text-checkout">Payment</div>
+            <!-- checkout 2: now clickable to adjust entires to form -->
+            <a href="checkout2.html"><div class="text-checkout">Payment</div></a>
             <div class="line-checkout hidden"></div>
             <div class="text-checkout">Order review</div>
             <div class="line-checkout hidden"></div>
@@ -89,44 +92,7 @@
 
                 <!-- Details of each Product in Cart -->
                 <div class="checkout-container">
-                    <div id="cart-items">
-
-                    </div>
-                    <!-- <div class="product-checkout-preview">
-                        <img class="x" src="res/x.png" alt="Remove">
-                        
-                        <div class="product-checkout-image">
-                            <img src="res/CanonProgram1.png" alt="Canon AE-1 Program w/ 50mm f1.8">
-                        </div>
-
-                        <h9 class="product-name">Canon AE-1 Program w/ 50mm f1.8</h9>
-
-                        <div class="quantity-button small-quantity-button">
-                            <button class="minus-btn">-</button>
-                            <span class="quantity"><h8>1</h8></span>
-                            <button class="plus-btn">+</button>
-                        </div> 
-
-                        <div class="price"><h9>$495.00</h9></div>
-                    </div>
-
-                    <div class="product-checkout-preview">
-                        <img class="x" src="res/x.png" alt="Remove">
-
-                        <div class="product-checkout-image">
-                            <img src="res/CanonProgram2.png" alt="Canon AE-1 Program w/ 50mm f1.4">
-                        </div>
-
-                        <h9 class="product-name">Canon AE-1 Program w/ 50mm f1.4</h9>
-
-                        <div class="quantity-button">
-                            <button class="minus-btn">-</button>
-                            <span class="quantity"><h8>1</h8></span>
-                            <button class="plus-btn">+</button>
-                        </div>    
-
-                        <div class="price"><h9>$585.00</h9></div>
-                    </div> -->
+                    <div id="cart-items"></div>
                 </div>
 
                 <!-- Delivery Address Confirmation -->
@@ -138,14 +104,8 @@
 
                     <hr class="divider">
 
-                    <div id="delivery-adress">
-                        <p id="name" class="checkout-text">John Johnson</p>
-                        <p id="adress1" class="checkout-text">37 Pleasant Street</p>
-                        <p id="adress2" class="checkout-text">Melbourne 3000 VIC</p>
-                        <!-- <p class="checkout-text" id="summary-name"></p>
-                        <p class="checkout-text" id="summary-address-line-1"></p>
-                        <p class="checkout-text" id="summary-address-line-2"></p> -->
-                    </div>
+                    <!-- Details of user's form input -->
+                    <div id="delivery-address"></div>
                 </div>
 
                 <!-- Payment Method Confirmation -->
@@ -157,11 +117,8 @@
 
                     <hr class="divider">
 
-                    <div id="payment">
-                        <p class="checkout-text" id="credit-no">1111-2222-3333-4444</p>
-                        <p class="checkout-text" id="credit-name">John Johnson</p>
-                        <p class="checkout-text" id="credit-date">12/2024</p>
-                    </div>
+                    <!-- Details of user's form input -->
+                    <div id="payment"></div>
                 </div>  
                 
 
@@ -189,7 +146,7 @@
                 </div>
 
                 <!-- Button to Continue to Checkout Stage -->
-                <input type="button" value="Proceed to Checkout" class="primary-btn" onclick="location.href='checkout4.html'">
+                <input type="button" value="Proceed to Checkout" class="primary-btn" onclick="location.href='checkout4.html';deleteCart()">
             </div>
         </form>
     </main>
@@ -207,7 +164,7 @@
             <a href="https://www.facebook.com/cameraexchangemelbourne/?eid=ARDY0bYNv0c2ogtGAsEm14fP2mm8SQceV7m2dc61daZtsbMJRWHISBcGqay6dpKx3cfRuE5MzESbQmg9"><img src="res/facebook.png" alt="Follow Us on Facebook"></a>
         </div>
     </footer>
-    <script src="shoppingcart.js"></script>
-    <script src="checkout.js"></script>
+    <script src="cartsummary.js"></script>
+    <script src="formsummary.js"></script>
 </body>
 </html>
