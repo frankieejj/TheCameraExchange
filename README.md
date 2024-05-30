@@ -1,4 +1,5 @@
 ** Website Redesign: The Camera Exchange **
+
 Assignment 3: UI Implementation 
 INFO20005 Semester 1 University of Melbourne
 
