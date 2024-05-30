@@ -1,4 +1,40 @@
 /**
+ * Change to display the dropdown search button
+ * W3Schools. (n.d.). How To Create a Filterable Dropdown. Retrieved from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
+ */
+function dropdownSearch() {
+  document.getElementById("dropdown").classList.toggle("show");
+}
+
+/**
+* Filter the dropdown search button items based on user input
+* W3Schools. (n.d.). How To Create a Filterable Dropdown. Retrieved from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
+*/
+function filterSearchResults() {
+  // Define attributes
+  const input = document.getElementById("input");
+  const userSearched = input.value.toUpperCase();
+  const pages = document.getElementById("dropdown").getElementsByTagName("a");
+
+  // show or hide pages depending on user input
+  for (let i = 0; i < pages.length; i++) {
+    const pageTitle = pages[i].textContent || pages[i].innerText;
+    if (pageTitle.toUpperCase().indexOf(userSearched)>-1){
+      pages[i].style.display = "";
+    } else {
+      pages[i].style.display = "none";
+    }
+  }
+}
+
+/**
+ * Delete all local storage when session is complete
+ */
+function deleteCart() {
+  localStorage.clear();
+}
+
+/**
  * Add to Cart Button - clicked, loads, ticks when complete and adds all product information to local storage
  * W3Schools. (n.d.). Window localStorage Property. Retrieved from https://www.w3schools.com/jsref/prop_win_localstorage.asp
  * freeCodeCamp Forum. (n.d.). How do I save the items of a shopping cart in the local storage?. Retrieved from https://forum.freecodecamp.org/t/how-do-i-save-the-items-of-a-shopping-cart-in-the-local-storage/254745/3
@@ -77,3 +113,50 @@ function changeMainImage(src){
   document.getElementById("main-image").src = src;
 }
 
+/**
+ * Submit customer information form into local storage
+ */
+function sumbitCustomerDetails() {
+    // Collect attributes
+    const fname = document.getElementById('fname').value;
+    const lname = document.getElementById('lname').value;
+    const adr = document.getElementById('adr').value;
+    const suburb = document.getElementById('suburb').value;
+    const state = document.getElementById('state').value;
+    const postcode = document.getElementById('postcode').value;
+  
+    // JSON of details
+    const customerDetails = {
+      fname: fname,
+      lname: lname,
+      adr: adr,
+      suburb: suburb,
+      state: state,
+      postcode: postcode
+    };
+  
+    // put into local storage
+    localStorage.setItem('customerDetails', JSON.stringify(customerDetails));
+}
+
+/**
+* Submit payment details form into local storage
+*/
+function submitPayment() {
+    // Collect attributes
+    const cname = document.getElementById('cname').value;
+    const ccnum = document.getElementById('ccnum').value;
+    const expdate = document.getElementById('expdate').value;
+    const cvv = document.getElementById('cvv').value;
+  
+    // JSON of details
+    const payment = {
+      cname: cname,
+      ccnum: ccnum,
+      expdate: expdate,
+      cvv: cvv,
+    };
+  
+    // put into local storage
+    localStorage.setItem('payment', JSON.stringify(payment));
+}
